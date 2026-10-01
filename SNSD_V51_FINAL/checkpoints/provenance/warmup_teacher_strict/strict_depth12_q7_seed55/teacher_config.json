@@ -1,0 +1,23 @@
+{
+  "candidates": {
+    "boundary_top_h": 8,
+    "warmup_quartets": 7
+  },
+  "data_path": "/root/autodl-tmp/TEVC打包-西北B区  875机 2d9d419d8f-7dcc6ebc/875-codex/data/C3.csv",
+  "graph": {
+    "ground_transition": 340,
+    "horizon_end": 259200,
+    "horizon_start": 0,
+    "num_agents": 6,
+    "satellite_change": 150,
+    "satellite_transition": 300
+  },
+  "local_solver": {
+    "moves": 500,
+    "restarts": 2
+  },
+  "purpose": "v1.5 offline teacher only; no online evaluation",
+  "scenario": "C3",
+  "schema_version": 2,
+  "seed": 55
+}

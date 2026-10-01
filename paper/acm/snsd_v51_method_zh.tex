@@ -1,0 +1,69 @@
+%% Derived from the official ACM sigconf sample kept in template/sigconf.tex.
+%% Chinese internal draft: translate the body to English before submission.
+\documentclass[sigconf,nonacm]{acmart}
+
+\usepackage{amsmath,amssymb,booktabs,array,multirow}
+\usepackage{xeCJK}
+\setCJKmainfont{FandolSong-Regular}
+\setCJKsansfont{FandolHei-Regular}
+\setCJKmonofont{FandolFang-Regular}
+
+\settopmatter{printacmref=false,printccs=false,printfolios=true}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\pagestyle{plain}
+
+\newcommand{\method}{\textsc{SNSD-v5.1}}
+\newcommand{\phased}{\textsc{Phased}}
+\newcommand{\fullmethod}{\textsc{Full}}
+\newcommand{\oneshot}{\textsc{OneShot}}
+\newcommand{\selectiononly}{\textsc{SelectionOnly}}
+
+\begin{document}
+
+\title{SNSD-v5.1：面向星地链路调度的语义保护三图联合协商}
+
+\author{Anonymous Authors}
+\affiliation{%
+  \institution{Anonymous Institution}
+  \city{Anonymous}
+  \country{Anonymous}}
+
+\begin{abstract}
+分组式多智能体调度会切断跨组冲突和收益替换关系，标量消息或搜索锚点难以恢复丢失的
+组合结构。本文提出\method，耦合私有子图、动态边界图和公共全局图：局部图保留真实完整
+候选，边界图组织跨智能体 delete--replace--refill 动作，全局图执行权威验证。方法从同一
+不可变状态配对生成零语义和处理分支，仅允许严格改善且被接纳的语义响应影响未来候选域。
+在完整 C3、6 智能体和每次 288 次相同 worker 调用下，结构化联盟动作在有/无 learned
+semantics 时分别取得 $20{,}214.1$ 和 $16{,}424.2$ 的平均配对增益，均为 16/16 seeds
+正向；持续分阶段通信相对零语义和一次性通信分别提高 $5{,}033.6$ 和 $4{,}810.7$。
+结论限定于 C3 机制验证，不声称全局最优或跨实例泛化。
+\end{abstract}
+
+\keywords{multi-agent systems, satellite scheduling, graph coordination}
+
+\maketitle
+
+\section{方法概览}
+
+本文关注的瓶颈并非单个智能体能否继续增强局部求解，而是强初始解附近如何传播和共同
+可行化多个智能体的私有改进。分组已经第一次压缩了全局组合空间；若通信再把局部状态压成
+一个标量或池化嵌入，就难以重构跨边界的一对多替换和回填。因此，\method 将信息流固定为
+三个不对称阶段：
+\begin{equation}
+\text{局部子图生成响应}
+\rightarrow
+\text{边界图协商交换}
+\rightarrow
+\text{全局图验证并提交}.
+\end{equation}
+
+方法包含两个核心贡献。第一，结构保持的三图原始--对偶执行器把通信直接转换为完整的
+跨智能体 delete--replace--refill 响应，而不只修改下轮搜索中心。第二，同状态
+$C_0/C_A$ 配对保护阻止未接纳的语义响应污染未来搜索域，并保证已提交目标值单调不下降。
+论文主配置 \phased（代码名 \texttt{AlternatingConflictBenefit}）进一步把冲突处理和收益
+恢复按步骤交替消费。
+
+\input{sections/method_zh}
+\input{sections/results_zh}
+
+\end{document}

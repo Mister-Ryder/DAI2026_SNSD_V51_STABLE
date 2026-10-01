@@ -1,0 +1,122 @@
+\section{正式实验协议}
+
+所有实验均使用完整 C3 而非 smoke。Original Learned 使用 seeds
+$\{11,22,33,44,55,66,77,88\}$；Fresh Learned 使用在矩阵执行前固定的 seeds
+$\{101,202,303,404,505,606,707,808\}$；Oracle 机制诊断使用 Original 8 seeds。
+每套矩阵包含表~\ref{tab:methods} 的 8 个配置，合计 64 runs。
+
+\begin{table}[t]
+\caption{冻结消融矩阵。A 为真实语义处理，B 为结构化联盟响应进入选择和受保护域。}
+\label{tab:methods}
+\small
+\begin{tabular}{lccc}
+\toprule
+配置 & A & B & 作用 \\
+\midrule
+Full & 1 & 1 & 同时语义 + 联盟 \\
+FrozenAnchorComm & 1 & 0 & 语义、无联盟注入 \\
+SelectionOnly & 0 & 1 & 零语义 + 联盟 \\
+FrozenAnchorSelectionOnly & 0 & 0 & 因子基线 \\
+AlternatingConflictBenefit & 1 & 1 & 分阶段持续语义 \\
+OneShotComm & 部分 & 1 & 仅一次真实语义 \\
+ShuffledComm & 置乱 & 1 & 错误语义归属 \\
+NoPeerFinalShield & 0 & 0 & 无 peer、仅安全屏障 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+三套矩阵共 192 runs，每次 288 次 worker 调用，总计 55,296 次。两套 Learned 矩阵均严格
+加载同一个 456,075 参数 checkpoint；其文件 SHA-256 的完整值随复现包清单发布。
+128/128 Learned runs 均满足严格键匹配且 \texttt{oracle\_mode=false}。三套矩阵的缺失/意外/重复
+cell、预算违规、额外 worker 调用、语义日程违规和未接纳 $C_A$ 污染均为 0。
+
+\section{Learned 结果}
+
+增益定义为 $F(Y_{\mathrm{final}})-F(Y_{\mathrm{initial}})$，表中报告 seed 间均值和样本
+标准差。Pooled 16 仅用于描述配对效应，不能解释为 16 个独立问题实例。
+
+\begin{table}[t]
+\caption{完整 C3 上的 Learned 最终增益（mean $\pm$ sample SD）。}
+\label{tab:learned-main}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{lrrr}
+\toprule
+方法 & Original 8 & Fresh 8 & Pooled 16 \\
+\midrule
+\textbf{Phased} & \textbf{38,805.5$\pm$5,752.8} &
+\textbf{32,963.8$\pm$5,022.8} & \textbf{35,884.6$\pm$6,026.4} \\
+Full & 36,630.4$\pm$7,956.1 & 31,149.0$\pm$5,115.7 & 33,889.7$\pm$7,054.4 \\
+Shuffled & 35,894.3$\pm$8,015.7 & 32,725.3$\pm$6,467.9 & 34,309.8$\pm$7,223.9 \\
+OneShot & 34,777.9$\pm$7,994.1 & 27,370.0$\pm$5,702.9 & 31,073.9$\pm$7,722.3 \\
+SelectionOnly & 34,133.1$\pm$5,945.2 & 27,569.0$\pm$7,530.3 & 30,851.1$\pm$7,378.8 \\
+FrozenComm & 15,106.4$\pm$6,545.1 & 12,244.9$\pm$4,849.4 & 13,675.6$\pm$5,757.6 \\
+A0B0 & 16,416.1$\pm$4,987.8 & 12,437.6$\pm$5,277.3 & 14,426.9$\pm$5,369.1 \\
+NoPeer & 16,423.0$\pm$4,983.1 & 12,437.6$\pm$5,277.3 & 14,430.3$\pm$5,368.4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\phased 在 Original、Fresh 和 pooled 三个视图中均取得最高平均增益，其平均最终目标分别为
+6,121,118.6、6,116,224.0 和 6,118,671.3。不过 Fresh 上 \phased 只比 Shuffled 高
+238.5，因而只能称为平均表现最好的冻结配置，不能声称准确 learned 语义稳定击败置乱语义。
+
+\subsection{结构化联盟动作是最稳定的主效应}
+
+\begin{table}[t]
+\caption{Pooled 16-seed 因子 B 的配对效应。}
+\label{tab:factor-b}
+\centering
+\small
+\begin{tabular}{lrrr}
+\toprule
+效应 & Mean $\pm$ SD & 正向 & Sign $p$ \\
+\midrule
+$B\mid A$ & \textbf{20,214.1 $\pm$ 5,685.9} & \textbf{16/16} & $3.05\!\times\!10^{-5}$ \\
+$B\mid\neg A$ & \textbf{16,424.2 $\pm$ 5,095.9} & \textbf{16/16} & $3.05\!\times\!10^{-5}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+无论有无 learned semantics，结构化联盟响应进入候选选择和后续受保护域后都在 16/16 seeds
+产生大幅正向提升。这是当前最强证据：主要收益来自 delete--replace--refill 联合动作实质
+扩展了全局可行候选域，而非某个消息排序器的偶然结果。
+
+\subsection{持续分阶段通信优于零语义和一次通信}
+
+\begin{table}[t]
+\caption{Pooled 16-seed 通信协议配对差。}
+\label{tab:protocol-effects}
+\centering
+\small
+\begin{tabular}{lrrr}
+\toprule
+对比 & Mean $\pm$ SD & 正向 & Sign $p$ \\
+\midrule
+Phased $-$ SelectionOnly & \textbf{5,033.6 $\pm$ 5,072.7} & \textbf{14/16} & .0042 \\
+Phased $-$ OneShot & \textbf{4,810.7 $\pm$ 4,742.8} & \textbf{14/16} & .0042 \\
+Phased $-$ Full & 1,994.9 $\pm$ 4,759.3 & 10/16 & .4545 \\
+Phased $-$ Shuffled & 1,574.9 $\pm$ 5,799.1 & 12/16 & .0768 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+前两项支持持续冲突--收益通信的附加价值；对应的双侧 sign-flip mean $p$ 分别为 .0017 和
+.0019。后两项只显示平均方向为正，不能支持普遍或统计显著支配。
+
+语义因子在联盟存在时为 $A\mid B=3,038.6\pm5,773.6$，12/16 正向，精确 sign
+$p=.0768$，属于边缘补充证据；脱离联盟时为
+$A\mid\neg B=-751.3\pm5,489.2$。因此更稳妥的解释是：语义信息需要与可执行的联合动作
+耦合，而不是独立地产生稳定主效应。
+
+\section{Oracle 机制诊断与局限}
+
+Original 8 seeds 中，Oracle Full 的增益为 $35,589.1\pm4,433.3$，OneShot 为
+$36,860.0\pm3,965.6$；$B\mid A=17,428.5\pm5,358.2$ 和
+$B\mid\neg A=17,994.8\pm4,135.2$ 均为 8/8 正向。该矩阵再次验证联合动作机制能利用信息
+充分的冲突/机会信号，但 Oracle 不是全局上界，也不能和 Learned 配置排名混为一谈。
+
+局限为：单一 C3；未与 KP-NLNS/CPLEX 作同协议比较；Phased 对 Full/Shuffled 的优势
+不均匀；checkpoint 未以 v5.1 联盟差值重训。因此本文只主张联合机制及配对效应，不主张
+跨实例泛化、绝对 SOTA 或全局最优。

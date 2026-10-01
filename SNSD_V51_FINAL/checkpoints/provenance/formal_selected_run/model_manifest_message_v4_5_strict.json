@@ -1,0 +1,611 @@
+{
+  "best_epoch": 3,
+  "best_validation_loss": 3.3512077443301678,
+  "candidate_objective_in_own_message": false,
+  "checkpoint": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/train_v45_strict_fast_main_20260802/warmstart_e2e_lr3e4_eps05_d12_e12_fast/checkpoint_message_v4_5_strict.pt",
+  "checkpoint_hash": "e2fbc9aa02b879ac9cd0bbe55f00838b9668d193933427e822bc00ff910505f8",
+  "encoder_trainable_parameter_count": 292676,
+  "encoder_training": "end-to-end",
+  "exact_advantage_identity": "global_advantage = local_gain + externality",
+  "expected_parameter_count": 456075,
+  "fabricated_zero_labels": false,
+  "feature_builder": "runtime_v2.prepare plus experiment_v3-equivalent BoundaryState",
+  "frozen_nonacquisition_parameter_count": 57664,
+  "full_agent_transitions_per_trajectory": 12,
+  "gradient_scope": "full/local/boundary/message encoders and all heads within each observation; discrete selection and exact factor transitions detached",
+  "heads_only": false,
+  "inference_depth_compatibility": "runner must match trained_negotiation_steps or explicitly log a depth mismatch ablation",
+  "initial_checkpoint": "/root/autodl-tmp/DAI2026_SNSD_V15/checkpoints/message_v3_trial_a/checkpoint_message_v3.pt",
+  "negotiation_steps": 12,
+  "parameter_count": 456075,
+  "real_target": "exact chain held-out label in Real on-policy branch state",
+  "real_zero_source_excludes_current_heldout": true,
+  "schema_version": "SNSD-v1.5-e2e-on-policy-deep-real-zero-v4.5-strict",
+  "split": {
+    "available_seeds": [
+      11,
+      22,
+      33,
+      44,
+      55,
+      66,
+      77,
+      88
+    ],
+    "missing_requested_seeds": [],
+    "same_instance_scope": "trajectory/worker-seed robustness on one C3 instance; not cross-instance generalization",
+    "schema_version": 2,
+    "seed_overlap": false,
+    "split_unit": "seed",
+    "test_seeds": [
+      11,
+      22
+    ],
+    "train_seeds": [
+      44,
+      55,
+      66,
+      77,
+      88
+    ],
+    "validation_seeds": [
+      33
+    ]
+  },
+  "strict_load_verified": true,
+  "test_metrics": {
+    "advantage_decomposition_checked_group": 1.0,
+    "arc_pressure_loss": 0.4664617147031499,
+    "candidate_count": 4896.0,
+    "communication_input_group": 0.4583333333333333,
+    "delta_sign_accuracy": NaN,
+    "exact_target_group": 1.0,
+    "fabricated_zero_target_group": 0.0,
+    "groups": 576.0,
+    "intrinsic_target_group": 0.5,
+    "loss": 3.702823437646859,
+    "pressure_count": 18128.0,
+    "real_loss": 5.035817212114732,
+    "real_rank_accuracy": 0.6149045521292217,
+    "real_rank_correct": 6700.0,
+    "real_rank_pairs": 10896.0,
+    "shuffled_rank_accuracy": NaN,
+    "trajectory_step": 5.5,
+    "zero_input_group": 0.4583333333333333,
+    "zero_loss": 9.479318652715948,
+    "zero_rank_accuracy": 0.6039831130690162,
+    "zero_rank_correct": 6581.0,
+    "zero_rank_pairs": 10896.0
+  },
+  "test_rollout": {
+    "all_sources_exclude_current_heldout": true,
+    "all_steps_full_agent_activity": true,
+    "candidate_objective_in_own_message": false,
+    "exact_advantage_identity": "global_advantage = local_gain + externality",
+    "fabricated_zero_labels": false,
+    "gradient_through_discrete_factor_transition": false,
+    "negotiation_steps": 12,
+    "per_step": {
+      "Real/step_0": {
+        "anchor_change_events": 3,
+        "anchor_change_rate": 0.125,
+        "candidate_samples": 336,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 14,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Real/step_1": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 312,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 13,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Real/step_10": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 96,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 4,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Real/step_11": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 72,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 3,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Real/step_2": {
+        "anchor_change_events": 1,
+        "anchor_change_rate": 0.041666666666666664,
+        "candidate_samples": 288,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 12,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Real/step_3": {
+        "anchor_change_events": 1,
+        "anchor_change_rate": 0.041666666666666664,
+        "candidate_samples": 264,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 11,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Real/step_4": {
+        "anchor_change_events": 2,
+        "anchor_change_rate": 0.08333333333333333,
+        "candidate_samples": 240,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 10,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Real/step_5": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 216,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 9,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Real/step_6": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 192,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 8,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Real/step_7": {
+        "anchor_change_events": 1,
+        "anchor_change_rate": 0.041666666666666664,
+        "candidate_samples": 168,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 7,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Real/step_8": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 144,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 6,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Real/step_9": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 120,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 5,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Zero/step_0": {
+        "anchor_change_events": 2,
+        "anchor_change_rate": 0.08333333333333333,
+        "candidate_samples": 336,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 14,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Zero/step_1": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 312,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 13,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Zero/step_10": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 96,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 4,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Zero/step_11": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 72,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 3,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Zero/step_2": {
+        "anchor_change_events": 2,
+        "anchor_change_rate": 0.08333333333333333,
+        "candidate_samples": 288,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 12,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Zero/step_3": {
+        "anchor_change_events": 1,
+        "anchor_change_rate": 0.041666666666666664,
+        "candidate_samples": 264,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 11,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Zero/step_4": {
+        "anchor_change_events": 2,
+        "anchor_change_rate": 0.08333333333333333,
+        "candidate_samples": 240,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 10,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Zero/step_5": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 216,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 9,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Zero/step_6": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 192,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 8,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Zero/step_7": {
+        "anchor_change_events": 1,
+        "anchor_change_rate": 0.041666666666666664,
+        "candidate_samples": 168,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 7,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Zero/step_8": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 144,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 6,
+        "observations": 4,
+        "revealed_candidates": 24
+      },
+      "Zero/step_9": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 120,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 5,
+        "observations": 4,
+        "revealed_candidates": 24
+      }
+    },
+    "real_message_input_steps": 44,
+    "revealed_candidates": 576,
+    "schema_version": "SNSD-v1.5-e2e-on-policy-deep-real-zero-v4.5-strict",
+    "trajectory_hash": "8833f1a4203c7ca92bcab04b58c51c3669cbbe4dafac7704b5964221c1078e6a",
+    "trajectory_observations": 96,
+    "variants": [
+      "Real",
+      "Zero"
+    ],
+    "zero_intervention_input_steps": 44,
+    "zero_target_semantics": "exact_information_restricted_intrinsic_marginal; not a zero-message global optimum"
+  },
+  "trainable_parameter_count": 398411,
+  "trained_negotiation_steps": 12,
+  "trainer_config": {
+    "device": "cuda:0",
+    "epochs": 12,
+    "exploration_epsilon": 0.05,
+    "folds": 2,
+    "gradient_clip": 5.0,
+    "heads_only": false,
+    "include_shuffled": false,
+    "initial_checkpoint": "/root/autodl-tmp/DAI2026_SNSD_V15/checkpoints/message_v3_trial_a/checkpoint_message_v3.pt",
+    "learning_rate": 0.0003,
+    "loss_weights": {
+      "advantage": 1.0,
+      "arc_pressure": 0.5,
+      "completion": 0.25,
+      "externality": 1.0,
+      "local_gain": 1.0,
+      "ranking": 0.5,
+      "uncertainty": 0.1
+    },
+    "negotiation_steps": 12,
+    "patience": 4,
+    "real_weight": 1.0,
+    "seed": 20260803,
+    "shuffled_weight": 0.1,
+    "weight_decay": 1e-05,
+    "zero_target_semantics": "intrinsic",
+    "zero_weight": 0.25
+  },
+  "validation_metrics": {
+    "advantage_decomposition_checked_group": 1.0,
+    "arc_pressure_loss": 0.5019670002576377,
+    "candidate_count": 2448.0,
+    "communication_input_group": 0.4583333333333333,
+    "delta_sign_accuracy": NaN,
+    "exact_target_group": 1.0,
+    "fabricated_zero_target_group": 0.0,
+    "groups": 288.0,
+    "intrinsic_target_group": 0.5,
+    "loss": 3.3512076657886305,
+    "pressure_count": 9064.0,
+    "real_loss": 4.242870560122861,
+    "real_rank_accuracy": 0.6299559471365639,
+    "real_rank_correct": 3432.0,
+    "real_rank_pairs": 5448.0,
+    "shuffled_rank_accuracy": NaN,
+    "trajectory_step": 5.5,
+    "zero_input_group": 0.4583333333333333,
+    "zero_loss": 9.838179085817602,
+    "zero_rank_accuracy": 0.6294052863436124,
+    "zero_rank_correct": 3429.0,
+    "zero_rank_pairs": 5448.0
+  },
+  "validation_rollout": {
+    "all_sources_exclude_current_heldout": true,
+    "all_steps_full_agent_activity": true,
+    "candidate_objective_in_own_message": false,
+    "exact_advantage_identity": "global_advantage = local_gain + externality",
+    "fabricated_zero_labels": false,
+    "gradient_through_discrete_factor_transition": false,
+    "negotiation_steps": 12,
+    "per_step": {
+      "Real/step_0": {
+        "anchor_change_events": 1,
+        "anchor_change_rate": 0.08333333333333333,
+        "candidate_samples": 168,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 14,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Real/step_1": {
+        "anchor_change_events": 1,
+        "anchor_change_rate": 0.08333333333333333,
+        "candidate_samples": 156,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 13,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Real/step_10": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 48,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 4,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Real/step_11": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 36,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 3,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Real/step_2": {
+        "anchor_change_events": 1,
+        "anchor_change_rate": 0.08333333333333333,
+        "candidate_samples": 144,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 12,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Real/step_3": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 132,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 11,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Real/step_4": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 120,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 10,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Real/step_5": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 108,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 9,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Real/step_6": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 96,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 8,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Real/step_7": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 84,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 7,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Real/step_8": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 72,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 6,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Real/step_9": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 60,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 5,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Zero/step_0": {
+        "anchor_change_events": 1,
+        "anchor_change_rate": 0.08333333333333333,
+        "candidate_samples": 168,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 14,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Zero/step_1": {
+        "anchor_change_events": 2,
+        "anchor_change_rate": 0.16666666666666666,
+        "candidate_samples": 156,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 13,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Zero/step_10": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 48,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 4,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Zero/step_11": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 36,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 3,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Zero/step_2": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 144,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 12,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Zero/step_3": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 132,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 11,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Zero/step_4": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 120,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 10,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Zero/step_5": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 108,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 9,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Zero/step_6": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 96,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 8,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Zero/step_7": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 84,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 7,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Zero/step_8": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 72,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 6,
+        "observations": 2,
+        "revealed_candidates": 12
+      },
+      "Zero/step_9": {
+        "anchor_change_events": 0,
+        "anchor_change_rate": 0.0,
+        "candidate_samples": 60,
+        "full_agent_activity": true,
+        "minimum_candidates_per_agent": 5,
+        "observations": 2,
+        "revealed_candidates": 12
+      }
+    },
+    "real_message_input_steps": 22,
+    "revealed_candidates": 288,
+    "schema_version": "SNSD-v1.5-e2e-on-policy-deep-real-zero-v4.5-strict",
+    "trajectory_hash": "44cb99696960f0f27cfeb35aad607e4826f435db1a7548502ce44e12ba8d2907",
+    "trajectory_observations": 48,
+    "variants": [
+      "Real",
+      "Zero"
+    ],
+    "zero_intervention_input_steps": 22,
+    "zero_target_semantics": "exact_information_restricted_intrinsic_marginal; not a zero-message global optimum"
+  },
+  "zero_target": "exact information-restricted intrinsic marginal; not claimed as zero-message global optimum"
+}

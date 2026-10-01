@@ -1,0 +1,39 @@
+{
+  "available_seeds": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88
+  ],
+  "counts": {
+    "test_candidates": 348,
+    "test_identifiable_pressures": 824,
+    "train_candidates": 870,
+    "train_identifiable_pressures": 2060,
+    "validation_candidates": 174,
+    "validation_identifiable_pressures": 412
+  },
+  "missing_requested_seeds": [],
+  "same_instance_scope": "trajectory/worker-seed robustness on one C3 instance; not cross-instance generalization",
+  "schema_version": 2,
+  "seed_overlap": false,
+  "split_unit": "seed",
+  "test_seeds": [
+    11,
+    22
+  ],
+  "train_seeds": [
+    44,
+    55,
+    66,
+    77,
+    88
+  ],
+  "validation_seeds": [
+    33
+  ]
+}

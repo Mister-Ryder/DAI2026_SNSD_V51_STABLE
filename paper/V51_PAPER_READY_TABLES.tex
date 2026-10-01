@@ -1,0 +1,90 @@
+% Paper-ready tables for the frozen SNSD v5.1 C3 experiments.
+% Requires booktabs (already supported by the ACM acmart template).
+
+\begin{table*}[t]
+  \caption{Learned-policy performance on the full C3 instance. Gain is the final
+  objective minus the paired initial objective. The fresh seed set was fixed
+  before launching its 64-run matrix. The pooled column is descriptive.}
+  \label{tab:v51-learned-main}
+  \centering
+  \scriptsize
+  \begin{tabular}{lrrrr}
+    \toprule
+    Method & Original 8 gain & Fresh 8 gain & Pooled 16 gain & Pooled final objective \\
+    \midrule
+    \textbf{SNSD-v5.1 phased (ours)} & \textbf{38,805.5 $\pm$ 5,752.8} & \textbf{32,963.8 $\pm$ 5,022.8} & \textbf{35,884.6 $\pm$ 6,026.4} & \textbf{6,118,671.3} \\
+    SNSD-v5.1 simultaneous & 36,630.4 $\pm$ 7,956.1 & 31,149.0 $\pm$ 5,115.7 & 33,889.7 $\pm$ 7,054.4 & 6,116,676.4 \\
+    Shuffled communication & 35,894.3 $\pm$ 8,015.7 & 32,725.3 $\pm$ 6,467.9 & 34,309.8 $\pm$ 7,223.9 & 6,117,096.4 \\
+    One-shot communication & 34,777.9 $\pm$ 7,994.1 & 27,370.0 $\pm$ 5,702.9 & 31,073.9 $\pm$ 7,722.3 & 6,113,860.6 \\
+    Selection only ($A{=}0,B{=}1$) & 34,133.1 $\pm$ 5,945.2 & 27,569.0 $\pm$ 7,530.3 & 30,851.1 $\pm$ 7,378.8 & 6,113,637.8 \\
+    Semantic only ($A{=}1,B{=}0$) & 15,106.4 $\pm$ 6,545.1 & 12,244.9 $\pm$ 4,849.4 & 13,675.6 $\pm$ 5,757.6 & 6,096,462.3 \\
+    Neither factor ($A{=}0,B{=}0$) & 16,416.1 $\pm$ 4,987.8 & 12,437.6 $\pm$ 5,277.3 & 14,426.9 $\pm$ 5,369.1 & 6,097,213.6 \\
+    No-peer control & 16,423.0 $\pm$ 4,983.1 & 12,437.6 $\pm$ 5,277.3 & 14,430.3 $\pm$ 5,368.4 & 6,097,217.0 \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
+
+\begin{table}[t]
+  \caption{Paired $2\times2$ effects of semantic messaging ($A$) and structured
+  coalition execution ($B$). ``Pos.'' is the number of positive paired seeds.}
+  \label{tab:v51-factorial}
+  \centering
+  \scriptsize
+  \begin{tabular}{lrrr}
+    \toprule
+    Effect & Original 8 & Fresh 8 & Pooled 16 \\
+    \midrule
+    $A\mid B$ & 2,497.3 (5/8) & 3,580.0 (7/8) & 3,038.6 (12/16) \\
+    $A\mid \neg B$ & $-$1,309.8 (2/8) & $-$192.8 (4/8) & $-$751.3 (6/16) \\
+    $B\mid A$ & 21,524.0 (8/8) & 18,904.1 (8/8) & \textbf{20,214.1 (16/16)} \\
+    $B\mid \neg A$ & 17,717.0 (8/8) & 15,131.4 (8/8) & \textbf{16,424.2 (16/16)} \\
+    $A\!\times\!B$ & 3,807.0 (5/8) & 3,772.8 (7/8) & 3,789.9 (12/16) \\
+    \bottomrule
+  \end{tabular}
+  \vspace{1mm}
+  \parbox{0.98\linewidth}{\scriptsize Exact two-sided sign tests give
+  $p=3.05\times10^{-5}$ for both pooled $B$ effects and $p=0.0768$ for the
+  pooled $A\mid B$ and interaction effects.}
+\end{table}
+
+\begin{table}[t]
+  \caption{Paired communication-protocol contrasts over the descriptive pooled
+  16 seeds.}
+  \label{tab:v51-protocol-contrasts}
+  \centering
+  \scriptsize
+  \begin{tabular}{lrr}
+    \toprule
+    Contrast & Mean $\pm$ SD & Positive seeds \\
+    \midrule
+    Phased $-$ selection only & \textbf{5,033.6 $\pm$ 5,072.7} & \textbf{14/16} \\
+    Phased $-$ one shot & \textbf{4,810.7 $\pm$ 4,742.8} & \textbf{14/16} \\
+    Phased $-$ simultaneous & 1,994.9 $\pm$ 4,759.3 & 10/16 \\
+    Phased $-$ shuffled & 1,574.9 $\pm$ 5,799.1 & 12/16 \\
+    \bottomrule
+  \end{tabular}
+  \vspace{1mm}
+  \parbox{0.98\linewidth}{\scriptsize The first two contrasts have an exact
+  two-sided sign-test $p=0.0042$. The phased configuration has the highest mean
+  in both seed sets, but its advantage over simultaneous and shuffled messaging
+  is not uniform.}
+\end{table}
+
+\begin{table*}[t]
+  \caption{Analytic mechanism-diagnostic results on the original eight seeds.
+  This policy is not a global upper bound and is reported separately from the
+  learned policy.}
+  \label{tab:v51-oracle}
+  \centering
+  \scriptsize
+  \begin{tabular}{lrr@{\qquad}lrr}
+    \toprule
+    Method & Gain & Final objective & Method & Gain & Final objective \\
+    \midrule
+    Full & 35,589.1 $\pm$ 4,433.3 & 6,117,902.3 & One shot & \textbf{36,860.0 $\pm$ 3,965.6} & \textbf{6,119,173.1} \\
+    Phased & 34,202.0 $\pm$ 5,874.2 & 6,116,515.1 & Shuffled & 32,971.0 $\pm$ 5,964.4 & 6,115,284.1 \\
+    Selection only & 33,282.1 $\pm$ 6,951.2 & 6,115,595.3 & Semantic only & 18,160.6 $\pm$ 4,853.1 & 6,100,473.8 \\
+    Neither factor & 15,287.4 $\pm$ 6,039.9 & 6,097,600.5 & No peer & 14,419.6 $\pm$ 6,674.3 & 6,096,732.8 \\
+    \bottomrule
+  \end{tabular}
+\end{table*}

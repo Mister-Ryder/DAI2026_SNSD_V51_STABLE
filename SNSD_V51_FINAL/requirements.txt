@@ -1,0 +1,4 @@
+# Direct dependencies; CPLEX is not called by the frozen SNSD-v5.1 executor.
+# Formal runs used the server's Python 3.7 cplexpy37 environment.
+numpy
+torch

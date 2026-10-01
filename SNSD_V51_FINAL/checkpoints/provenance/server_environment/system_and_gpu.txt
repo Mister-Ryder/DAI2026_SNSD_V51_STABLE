@@ -1,0 +1,41 @@
+Collecting environment information...
+PyTorch version: 1.12.1
+Is debug build: False
+CUDA used to build PyTorch: 11.3
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 20.04.4 LTS (x86_64)
+GCC version: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0
+Clang version: Could not collect
+CMake version: version 3.16.3
+Libc version: glibc-2.17
+
+Python version: 3.7.16 (default, Jan 17 2023, 22:20:44)  [GCC 11.2.0] (64-bit runtime)
+Python platform: Linux-5.15.0-78-generic-x86_64-with-debian-bullseye-sid
+Is CUDA available: False
+CUDA runtime version: Could not collect
+GPU models and configuration: 
+Nvidia driver version: Could not collect
+cuDNN version: Probably one of the following:
+/usr/lib/x86_64-linux-gnu/libcudnn.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.2.0
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.2.0
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+Is XNNPACK available: True
+
+Versions of relevant libraries:
+[pip3] numpy==1.21.5
+[pip3] torch==1.12.1
+[pip3] torchaudio==0.12.1
+[pip3] torchvision==0.13.1
+[conda] Could not collect
+
+GPU_INVENTORY
+
+UNAME
+Linux autodl-container-63984a89ed-0fc89124 5.15.0-78-generic #85-Ubuntu SMP Fri Jul 7 15:25:09 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux

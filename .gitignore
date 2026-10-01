@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.xdv
+paper/acm/snsd_v51_method_zh.pdf
+
+# The reviewed delivery PDF is tracked separately.
+!output/pdf/SNSD_V51_METHOD_ZH_ACM_SIGCONF.pdf
+!SNSD_V51_ABLATIONS/results/formal/*.log
+!SNSD_V51_FINAL/checkpoints/provenance/**/*.log

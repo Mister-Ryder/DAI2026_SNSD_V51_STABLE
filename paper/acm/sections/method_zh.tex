@@ -1,0 +1,211 @@
+\section{问题定义}
+
+在固定规划窗口中，每个可执行通信机会对应顶点 $v\in V$，非负权重 $w_v$ 为链路持续
+时间。当两个机会因为卫星或地面站资源冲突而不能同时调度时，在二者之间建立无向边。
+问题写为最大权独立集：
+\begin{equation}
+\begin{aligned}
+\max_{x\in\{0,1\}^{|V|}}\quad &F(x)=\sum_{v\in V}w_vx_v,\\
+\text{s.t.}\quad &x_u+x_v\leq 1,\quad \forall (u,v)\in E.
+\end{aligned}
+\label{eq:mwis}
+\end{equation}
+
+按链路开始时间把顶点划分为 $K$ 个互不相交的分组，
+$V=\dot\bigcup_{i=1}^{K}V_i$。智能体 $i$ 持有局部诱导图
+$G_i=(V_i,E_i)$，其中
+\begin{equation}
+E_i=\{(u,v)\in E:u,v\in V_i\},\qquad
+E_{\mathrm{cut}}=E\setminus\bigcup_iE_i.
+\end{equation}
+完整 C3 图包含 69,923 个顶点、979,960 条冲突边和 8,980 条切边，正式实现使用 6 个
+时间智能体。所有方法使用相同 local worker；worker 返回实际实现的局部独立集，而不是被
+假设为局部最优。多智能体协议负责选择局部状态、共享边界结构、组合真实局部记录并修复
+跨组不兼容。
+
+\section{三个耦合图}
+
+\subsection{私有局部子图}
+
+智能体不只保留当前锚点，而是维护少量 realized elites。每条 elite 包含 worker 实际返回的
+完整顶点集、精确局部收益和边界签名。完整局部集合保留了删除边界顶点之后构造替代响应所需
+的高维结构；其他智能体无需得到整个私有搜索空间，只接收真实记录及确定性的同组邻域扩展。
+
+\subsection{动态边界交互图}
+
+边界图由真实切边、当前 elites 暴露的边界顶点和响应候选动态构成。它传递明确的顶点身份、
+冲突端点、候选角色、删除成本和潜在回填收益。仍存在切边冲突的智能体形成活跃交互图，其
+大小为 2 或 3 的连通分量组成临时联盟。联盟共同决定删除哪些边界端点，受影响智能体再从
+各自私有子图中执行替换和回填。
+
+\subsection{公共全局图}
+
+完整冲突图提供局部图和边界摘要无法安全近似的长距离冲突、真实目标和因子残差。它负责
+生成压力/冲突/机会公共信号，并对每个完整响应执行权威独立性检查。全局图是公共事实层和
+最终安全屏障，不替代私有搜索，也不读取未查询的未来 worker 结果。
+
+\section{结构保持的原始--对偶联合动作}
+
+\subsection{带身份的边界包}
+
+后期协商时，智能体 $i$ 保留最多 $T$ 个价值最高且互异的真实记录，构造
+\begin{equation}
+P_i=(h_i,\mathcal E_i,B_i,C_i,\Phi_i,E_i^{\mathrm{cut}},R_i),
+\end{equation}
+其中 $h_i$ 是锚点哈希，$\mathcal E_i$ 是 elite ID，$B_i$ 是已选边界顶点，$C_i$ 是
+有限真实候选，$\Phi_i$ 是候选特征，$E_i^{\mathrm{cut}}$ 是相关切边，$R_i$ 是类型化关系
+计数。每个候选 $v\in C_i$ 的特征为
+\begin{equation}
+\phi_i(v)=(f_v,w_v,\widehat\Delta_v,d_v,\widehat r_v,u_v,\rho_v),
+\end{equation}
+分别表示 elite 选择频率、原始收益、经验局部边际、删除成本、最佳回填收益、不确定性和
+\texttt{keep}/\texttt{add-or-refill} 操作角色。所有 ID 必须来自已实现记录或确定性的同组
+一跳/两跳扩展，不能由未来宏轮结果制造。
+
+\subsection{三种语义通道}
+
+图消息管线为 $v\in V_i$ 输出压力 $p_i(v)$、冲突 $c_i(v)$ 和机会 $o_i(v)$，并在每个
+智能体内按最大绝对值归一化。完整语义信用为
+\begin{equation}
+q_i^{\mathrm{full}}(v)=
+\operatorname{norm}_i\left[p_i(v)+c_i(v)-\tfrac12|o_i(v)|\right].
+\end{equation}
+零语义控制令 $q_i(v)=0$。分阶段配置分别使用
+\begin{equation}
+\begin{split}
+q_i^{\mathrm{conf}}(v)&=\operatorname{norm}_i[p_i(v)+c_i(v)],\\
+q_i^{\mathrm{benefit}}(v)&=\operatorname{norm}_i[p_i(v)-o_i(v)].
+\end{split}
+\end{equation}
+Shuffled 控制保持消息数值集合、通信量和计算预算不变，但将通道值重新分配给错误的
+智能体/顶点 ID，以破坏语义对应关系。
+
+\subsection{切边价格和联合删除}
+
+令 $S^{\mathrm{priv}}$ 为当前私有 elites 并集。在微循环 $m$ 中，每条活跃切边
+$e=(u,v)$ 的非负价格按下式更新：
+\begin{equation}
+\lambda_e^{m+1}=\max\left\{0,\lambda_e^m+
+\frac{0.20}{\sqrt{m+1}}\max\left(1,\frac{w_u+w_v}{2}\right)\right\}.
+\end{equation}
+顶点价格为 $\Lambda_v=\sum_{e\ni v}\lambda_e$。两个冲突端点的保留分数为
+\begin{equation}
+\begin{aligned}
+k_i(v)&=w_v-\min\{w_v,\widehat r_v\}
++0.35s_{uv}q_i(v)-\Lambda_v,\\
+s_{uv}&=\max\left(1,\frac{w_u+w_v}{2}\right).
+\end{aligned}
+\label{eq:keep}
+\end{equation}
+执行器暂时删除分数较低的端点，并以固定收益/ID 规则处理平局。删除在联盟连通分量中分批
+执行，直到所有活跃切边冲突消失。式~\eqref{eq:keep} 是离散非凸协调启发式，本文不作
+ADMM 或渐近收敛声明。
+
+\subsection{Delete--replace--refill 闭包}
+
+对每个受删除影响的智能体，从被删顶点的同组一跳/两跳邻域以及保留 elites 中构造回填池。
+候选排序为
+\begin{equation}
+r_i(v)=\frac{w_v}{1+\log(1+\deg(v))}+0.20w_vq_i(v).
+\end{equation}
+执行器贪心加入与当前全局选择兼容的候选，再尝试确定性 one-for-many exchange：只有新顶点
+的冲突全部位于同一本地分组，且其收益严格大于被替换顶点总收益时才执行交换。输出是所有
+智能体的完整响应，而不是新锚点；完整图随后验证可行性并计算真实目标。
+
+\section{同状态语义保护}
+
+\subsection{配对 \texorpdfstring{$C_0/C_A$}{C0/CA} 分支}
+
+一个当前未被选择的语义响应如果仍进入后续 elites，就会改变未来候选域，造成语义域污染。
+为此，每个后期决策先冻结同一不可变状态，包括私有 elites、当前记录、联合记录、完整图和
+消息通道；随后配对生成零语义响应 $C_0$ 与注册处理响应 $C_A$。当处理本身为零时，
+$C_A\equiv C_0$，第二次执行被去重。否则两条分支只在语义信用上不同。
+
+\subsection{反事实微响应}
+
+第 0 个微循环复现原始结构化响应，后续微循环使用上一响应的删除和回填计数构造不同方案：
+\begin{equation}
+\widetilde q_i^m(v)=q_i(v)+5n_v^{\mathrm{del}}-3n_v^{\mathrm{refill}}.
+\end{equation}
+曾被删除的端点获得保留奖励，曾被回填的顶点受到再次选择惩罚。所有结构互异的响应都经
+全图验证，分支返回真实目标最高者。因此多微循环形成反事实删除/回填组合，而不是重复定价
+同一个动作。
+
+\subsection{严格语义门和单调提交}
+
+后期决策 $t$ 的候选包括当前调度 $Y_t$、因子/链组合 $J_t$、无消息修复 $R_t^0$、
+消息条件修复 $R_t^m$、零语义联盟响应 $C_t^0$ 和处理响应 $C_t^A$。处理分支只有满足
+\begin{equation}
+F(C_t^A)>\max\{F(J_t),F(R_t^0),F(R_t^m),F(C_t^0)\}
+\label{eq:gate}
+\end{equation}
+才具有资格。当联合动作因子 $B=1$ 时，有限候选并集为
+\begin{equation}
+\mathcal U_t=\{Y_t,J_t,R_t^0,R_t^m,C_t^0\}
+\cup\{C_t^A:\text{式~\eqref{eq:gate}成立}\}.
+\end{equation}
+当 $B=0$ 时，$C_t^0$ 和 $C_t^A$ 仍可用于配对诊断，但不进入提交并集。最终选择为
+\begin{equation}
+Y_{t+1}=\arg\max_{Y\in\mathcal U_t,\,Y\text{ 全图可行}}F(Y).
+\end{equation}
+因为 $Y_t\in\mathcal U_t$，所以 $F(Y_{t+1})\ge F(Y_t)$。该性质只保证提交序列单调，
+不保证式~\eqref{eq:mwis} 的全局最优。
+
+未来候选域采用独立安全规则：$C_t^0$ 在 $B=1$ 时作为受保护联盟基线；$C_t^A$ 只有通过
+严格门且最终被选为当前锚点时才能进入下一域。未接纳 $C_t^A$ 的任何组件均不注入。
+
+\section{持续冲突--收益分阶段协议}
+
+\phased 在后期 $C_A$ 分支中按源步骤交替使用 $q^{\mathrm{conf}}$ 和
+$q^{\mathrm{benefit}}$。零基实现的首个后期源步骤是 5，因此序列以冲突阶段开始，再进入
+收益阶段。冲突阶段回答“为了共同可行，谁应让步”，收益阶段回答“让步后如何恢复价值”。
+\fullmethod 在每个后期状态同时使用所有通道；\oneshot 只在第一个后期状态使用真实语义，
+此后使用 $C_0$；Shuffled 保持载荷和频次但破坏语义归属。
+
+需要区分同状态效应 $F(C_A)-F(C_0)$ 与端到端 A 因子。前者只衡量当前联合执行器的即时
+语义干预，后者还包含早期消息对 worker 提案和 realized candidate trajectory 的影响。
+
+\section{完整执行流程}
+
+每个宏轮首先由当前全局调度初始化各智能体的私有 elite 和记录域。在每个步骤中，6 个
+智能体并行调用 local worker 各一次，更新真实局部记录，并由因子/链协调器构造 $J_t$ 和
+边界残差。前 6 步只开发私有搜索；后 6 步依次构造 $R_t^0$、可用的 $R_t^m$，冻结状态，
+配对执行 $C_t^0/C_t^A$，应用式~\eqref{eq:gate}，最后在完整图上选择目标最高者。
+
+正式协议固定 4 个宏轮、每轮 12 步和 6 个智能体，因此每次运行使用
+\begin{equation}
+4\times 12\times 6=288
+\end{equation}
+次付费 worker 调用。结构化分支、微循环和候选验证增加 0 次 worker 调用，且不因连续无提升
+而提前终止。每个宏轮有 6 个后期决策，整次运行共 24 个后期联合协商状态。
+
+\section{通信和计算开销}
+
+令 $T_i\le T$ 为智能体 $i$ 的 elite 数，$c_i\le4T$ 为 packet 候选数，$b_i$ 为已选
+边界 ID 数，$r_i$ 为类型化关系数。实现按
+\begin{equation}
+L_i=8c_i+3r_i+T_i+b_i+6
+\end{equation}
+个数值槽位核算一个 packet，ID 和哈希保守按 8 字节计。含 $M$ 个微循环的一条分支为
+\begin{equation}
+L_{\mathrm{branch}}=M\sum_iL_i+2\sum_{m=0}^{M-2}
+\left(|D_m\cap B|+|H_m|\right),
+\end{equation}
+报告字节数为 $8L_{\mathrm{branch}}$。这是一致的载荷核算约定，不代表某个网络序列化器的
+实测开销。
+
+packet 提取复杂度为
+$O(\sum_iT_i|B_i|+\sum_ic_i^2+H_{\mathrm{packet}})$；单个微循环为
+$O(|E_{\mathrm{cut}}(S^{\mathrm{priv}})|+H_{\mathrm{refill}}+|V|+|E|)$，其中最后一项
+是权威全图验证。实现把回填池限制为 192 个顶点，把交换短名单限制为 64 个顶点，最终最多
+验证 6 个命名候选。冻结实现使用 $T\in\{4,6\}$、$M\in\{3,4\}$。
+
+\section{Learned 和解析模式}
+
+v5.1 执行器本身没有端到端重新训练。Learned 运行严格加载验证选择的 TriGraph checkpoint
+并冻结参数；GNN/消息模型负责继承的提案和边界通道，结构化执行器将其转为联合响应。该模型
+含 456,075 个参数，但没有使用 v5.1 特有的 $C_A-C_0$ 或 coalition-delta 监督。
+
+解析 Oracle 移除 checkpoint，通过同一接口使用解析压力/排序脚手架，只诊断机制能否利用
+信息充分的冲突和机会信号。它不知道未查询的未来候选，不是全局 MWIS 上界，也不是 Learned
+运行时教师；两类结果必须分开报告。

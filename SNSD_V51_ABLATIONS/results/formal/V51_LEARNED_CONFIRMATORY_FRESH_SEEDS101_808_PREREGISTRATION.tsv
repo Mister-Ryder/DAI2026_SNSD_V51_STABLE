@@ -1,0 +1,8 @@
+registration_item	value
+purpose	independent fresh-seed confirmation
+seeds	101,202,303,404,505,606,707,808
+methods	Full FrozenAnchorComm SelectionOnly FrozenAnchorSelectionOnly AlternatingConflictBenefit OneShotComm ShuffledComm NoPeerFinalShield
+dataset	complete C3
+protocol	d12_m4_6agents_288calls
+evaluation	learned-validation-selected_no-oracle
+checkpoint	/root/autodl-tmp/DAI2026_SNSD_V15/runs/train_v45_strict_fast_main_20260802/warmstart_e2e_lr3e4_eps05_d12_e12_fast/checkpoint_message_v4_5_strict.pt

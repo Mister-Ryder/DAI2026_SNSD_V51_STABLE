@@ -1,0 +1,378 @@
+{
+  "advantage_label_count": 816,
+  "candidate_count": 816,
+  "completion_is_degenerate": true,
+  "completion_label_count": 816,
+  "completion_negative": 0,
+  "completion_positive": 816,
+  "cut_edges": 8980,
+  "data_hash": "ec95f50c11d800f051e218aa1e414df873ddd12e1f71ce911da3ba28adff647e",
+  "data_path": "/root/autodl-tmp/TEVC打包-西北B区  875机 2d9d419d8f-7dcc6ebc/875-codex/data/C3.csv",
+  "dataset_hash": "fc898b5a96814e0ca55f01511209d1cc9885d61fabfcf6dc1da0dc19e44123ab",
+  "externality_label_count": 816,
+  "grain": "one row per (seed, round=-1, agent_id, signature_hash)",
+  "graph_edges": 979960,
+  "graph_nodes": 69923,
+  "join_key": [
+    "seed",
+    "round_id",
+    "agent_id",
+    "signature_hash"
+  ],
+  "local_gain_label_count": 816,
+  "model_input_contract": "prequery_candidates.jsonl contains no objective-valued field",
+  "pressure_coverage": 0.1271212588707189,
+  "pressure_identifiable": 3296,
+  "pressure_missing_policy": "mask_false; never impute zero",
+  "pressure_total": 25928,
+  "runs": [
+    {
+      "candidate_count": 102,
+      "candidate_count_by_agent": [
+        17,
+        17,
+        17,
+        17,
+        17,
+        17
+      ],
+      "completion_negative": 0,
+      "completion_positive": 102,
+      "exact_restricted_value": 6081665.0,
+      "online_artifact_audit": {
+        "available": true,
+        "duplicate_logical_reveals": 159,
+        "prediction_count": 576,
+        "proposal_count": 576,
+        "proposal_reveal_coverage": 0.22395833333333334,
+        "raw_reveal_rows": 288,
+        "source_hashes": {
+          "prediction_manifest": "222fd9e3fb68480e2bae209394bedfd544237172c97171dde384e1e69c1b6b9e",
+          "proposal_manifest": "9ff3a1d780394e89df4803d1a97967d3adbc697ab79d968475563f7989750dd6",
+          "reveal_ledger": "607a327c0dc7f7bedc0b3f700a8ee588507c16390589607f3117db625eded80f"
+        },
+        "unique_reveal_labels": 129
+      },
+      "pressure_coverage": 0.1271212588707189,
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "quartet_hashes": {
+        "0": "f52a3c5e5fee30dfb91206cfb3864e3386bbc4ce21f18d1484212c33131dbdc0",
+        "1": "d4b08228a36e8d3489a30d47bb9d6e4100dd8c50a0bf42d151ef914dbc7f8bd3",
+        "2": "392d94ec1e1d2f8ec823f6c8170729626e0627d49214ee97bbcd63191c35b3d7",
+        "3": "ef19e7c53d132a5321a13ba35ba5636f58ea01345c4cadfef698fd6ebd73e6fe",
+        "4": "30f5330eeb068e1fdfeb9bd529ee8db3aa91a5c2b2acec7151a3f78386e2efaf",
+        "5": "0e01216042a57b27fc5b727a7bd0c5e8fe336718fa1e190dab824951a47dfe2a"
+      },
+      "run_dir": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/v1_regression_seed44",
+      "seed": 44,
+      "warmup_manifest_hash": "ba44e4d23cbbd8148c49f15636eedfc820c8e6a42a4cf61bcd6dceed8688e68b"
+    },
+    {
+      "candidate_count": 102,
+      "candidate_count_by_agent": [
+        17,
+        17,
+        17,
+        17,
+        17,
+        17
+      ],
+      "completion_negative": 0,
+      "completion_positive": 102,
+      "exact_restricted_value": 6079243.0,
+      "online_artifact_audit": {
+        "available": true,
+        "duplicate_logical_reveals": 154,
+        "prediction_count": 576,
+        "proposal_count": 576,
+        "proposal_reveal_coverage": 0.2326388888888889,
+        "raw_reveal_rows": 288,
+        "source_hashes": {
+          "prediction_manifest": "bd87a106cb364091574690e9183faf05b0ac5a540b6b22064e3d797dca895de9",
+          "proposal_manifest": "855957a8f2f19686cab3917d5a793e620d07260b60ec58197fefbb581315f8f4",
+          "reveal_ledger": "a8b796ab175ecd0a2945f9ab4d7ca65661e892e12e7eeb235dbd20f8ac27e171"
+        },
+        "unique_reveal_labels": 134
+      },
+      "pressure_coverage": 0.1271212588707189,
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "quartet_hashes": {
+        "0": "f52a3c5e5fee30dfb91206cfb3864e3386bbc4ce21f18d1484212c33131dbdc0",
+        "1": "d4b08228a36e8d3489a30d47bb9d6e4100dd8c50a0bf42d151ef914dbc7f8bd3",
+        "2": "392d94ec1e1d2f8ec823f6c8170729626e0627d49214ee97bbcd63191c35b3d7",
+        "3": "ef19e7c53d132a5321a13ba35ba5636f58ea01345c4cadfef698fd6ebd73e6fe",
+        "4": "30f5330eeb068e1fdfeb9bd529ee8db3aa91a5c2b2acec7151a3f78386e2efaf",
+        "5": "0e01216042a57b27fc5b727a7bd0c5e8fe336718fa1e190dab824951a47dfe2a"
+      },
+      "run_dir": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/v1_regression_seed55",
+      "seed": 55,
+      "warmup_manifest_hash": "99c18e2fc9933e910b83fdefbcce22e5da917a18c52a10cfd43f3885901b36e4"
+    },
+    {
+      "candidate_count": 102,
+      "candidate_count_by_agent": [
+        17,
+        17,
+        17,
+        17,
+        17,
+        17
+      ],
+      "completion_negative": 0,
+      "completion_positive": 102,
+      "exact_restricted_value": 6087307.0,
+      "online_artifact_audit": {
+        "available": true,
+        "duplicate_logical_reveals": 148,
+        "prediction_count": 576,
+        "proposal_count": 576,
+        "proposal_reveal_coverage": 0.24305555555555555,
+        "raw_reveal_rows": 288,
+        "source_hashes": {
+          "prediction_manifest": "4cf1b586ca6e6e8ed2b909cd0d6d700b27396248922ded0c923f32c2753307ac",
+          "proposal_manifest": "763934fca4f9bccf0d03377631bb4b39cdb3d978f4a3e536be9130f424bcd8a0",
+          "reveal_ledger": "cca7f970077be389bb85d553ac3a7137a18b9f1d92975680d96850cb8ab7befc"
+        },
+        "unique_reveal_labels": 140
+      },
+      "pressure_coverage": 0.1271212588707189,
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "quartet_hashes": {
+        "0": "f52a3c5e5fee30dfb91206cfb3864e3386bbc4ce21f18d1484212c33131dbdc0",
+        "1": "d4b08228a36e8d3489a30d47bb9d6e4100dd8c50a0bf42d151ef914dbc7f8bd3",
+        "2": "392d94ec1e1d2f8ec823f6c8170729626e0627d49214ee97bbcd63191c35b3d7",
+        "3": "ef19e7c53d132a5321a13ba35ba5636f58ea01345c4cadfef698fd6ebd73e6fe",
+        "4": "30f5330eeb068e1fdfeb9bd529ee8db3aa91a5c2b2acec7151a3f78386e2efaf",
+        "5": "0e01216042a57b27fc5b727a7bd0c5e8fe336718fa1e190dab824951a47dfe2a"
+      },
+      "run_dir": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/v1_regression_seed66",
+      "seed": 66,
+      "warmup_manifest_hash": "10b0aebb0c2fc6b66fb4d71a200b6e475686bb5291f99e9d25875cd13c77143a"
+    },
+    {
+      "candidate_count": 102,
+      "candidate_count_by_agent": [
+        17,
+        17,
+        17,
+        17,
+        17,
+        17
+      ],
+      "completion_negative": 0,
+      "completion_positive": 102,
+      "exact_restricted_value": 6081503.0,
+      "online_artifact_audit": {
+        "available": true,
+        "duplicate_logical_reveals": 149,
+        "prediction_count": 576,
+        "proposal_count": 576,
+        "proposal_reveal_coverage": 0.24131944444444445,
+        "raw_reveal_rows": 288,
+        "source_hashes": {
+          "prediction_manifest": "9657a3e63b4b01af4993b4155593f142bfd3f5636a96b13df4789d44b09b6ba9",
+          "proposal_manifest": "b579d56ceb1072bf855e3bbc16bd091a0df8cdc0ccf97d93e9f381e350d17509",
+          "reveal_ledger": "dcc1e53a7c7e731f67accc097fc1723b0fd247646c198abd102c46c7a853b4a5"
+        },
+        "unique_reveal_labels": 139
+      },
+      "pressure_coverage": 0.1271212588707189,
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "quartet_hashes": {
+        "0": "f52a3c5e5fee30dfb91206cfb3864e3386bbc4ce21f18d1484212c33131dbdc0",
+        "1": "d4b08228a36e8d3489a30d47bb9d6e4100dd8c50a0bf42d151ef914dbc7f8bd3",
+        "2": "392d94ec1e1d2f8ec823f6c8170729626e0627d49214ee97bbcd63191c35b3d7",
+        "3": "ef19e7c53d132a5321a13ba35ba5636f58ea01345c4cadfef698fd6ebd73e6fe",
+        "4": "30f5330eeb068e1fdfeb9bd529ee8db3aa91a5c2b2acec7151a3f78386e2efaf",
+        "5": "0e01216042a57b27fc5b727a7bd0c5e8fe336718fa1e190dab824951a47dfe2a"
+      },
+      "run_dir": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/v1_regression_seed77",
+      "seed": 77,
+      "warmup_manifest_hash": "6e4ef1dba6047fc44fad0f0b3e25ee360485ff588984173d153b5d06cf491fc4"
+    },
+    {
+      "candidate_count": 102,
+      "candidate_count_by_agent": [
+        17,
+        17,
+        17,
+        17,
+        17,
+        17
+      ],
+      "completion_negative": 0,
+      "completion_positive": 102,
+      "exact_restricted_value": 6082566.0,
+      "online_artifact_audit": {
+        "available": true,
+        "duplicate_logical_reveals": 144,
+        "prediction_count": 576,
+        "proposal_count": 576,
+        "proposal_reveal_coverage": 0.25,
+        "raw_reveal_rows": 288,
+        "source_hashes": {
+          "prediction_manifest": "82b4fe96219eb0ee3f1fc1363347512e5ef807eb711e42b615d75eec2243dbd0",
+          "proposal_manifest": "edd9a15ea270bbde3c26c1a198a24d50761a558de030c9223002b7309cfddef0",
+          "reveal_ledger": "aa14b2c6207c6e14ab22eeaf46d11f551e79e3b5f61200475eaff5718af8ed78"
+        },
+        "unique_reveal_labels": 144
+      },
+      "pressure_coverage": 0.1271212588707189,
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "quartet_hashes": {
+        "0": "f52a3c5e5fee30dfb91206cfb3864e3386bbc4ce21f18d1484212c33131dbdc0",
+        "1": "d4b08228a36e8d3489a30d47bb9d6e4100dd8c50a0bf42d151ef914dbc7f8bd3",
+        "2": "392d94ec1e1d2f8ec823f6c8170729626e0627d49214ee97bbcd63191c35b3d7",
+        "3": "ef19e7c53d132a5321a13ba35ba5636f58ea01345c4cadfef698fd6ebd73e6fe",
+        "4": "30f5330eeb068e1fdfeb9bd529ee8db3aa91a5c2b2acec7151a3f78386e2efaf",
+        "5": "0e01216042a57b27fc5b727a7bd0c5e8fe336718fa1e190dab824951a47dfe2a"
+      },
+      "run_dir": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/v1_regression_seed88",
+      "seed": 88,
+      "warmup_manifest_hash": "55995e7091c577b04ab85f3a7f617f1620be8a4aad730fc031905daff779de15"
+    },
+    {
+      "candidate_count": 102,
+      "candidate_count_by_agent": [
+        17,
+        17,
+        17,
+        17,
+        17,
+        17
+      ],
+      "completion_negative": 0,
+      "completion_positive": 102,
+      "exact_restricted_value": 6083035.0,
+      "online_artifact_audit": {
+        "available": true,
+        "duplicate_logical_reveals": 139,
+        "prediction_count": 576,
+        "proposal_count": 576,
+        "proposal_reveal_coverage": 0.2586805555555556,
+        "raw_reveal_rows": 288,
+        "source_hashes": {
+          "prediction_manifest": "e2647b5100b4e8172a4cc431825becbc5d0b4d30702b52ae057d6bcea6701efb",
+          "proposal_manifest": "3a968cff756602dcecefd516a04338ade971961212018bf09bec89fe82c2fa01",
+          "reveal_ledger": "dd515085ede499db9234755de805fe1c3cf6a983b9555f0c27b1364b82dc3041"
+        },
+        "unique_reveal_labels": 149
+      },
+      "pressure_coverage": 0.1271212588707189,
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "quartet_hashes": {
+        "0": "f52a3c5e5fee30dfb91206cfb3864e3386bbc4ce21f18d1484212c33131dbdc0",
+        "1": "d4b08228a36e8d3489a30d47bb9d6e4100dd8c50a0bf42d151ef914dbc7f8bd3",
+        "2": "392d94ec1e1d2f8ec823f6c8170729626e0627d49214ee97bbcd63191c35b3d7",
+        "3": "ef19e7c53d132a5321a13ba35ba5636f58ea01345c4cadfef698fd6ebd73e6fe",
+        "4": "30f5330eeb068e1fdfeb9bd529ee8db3aa91a5c2b2acec7151a3f78386e2efaf",
+        "5": "0e01216042a57b27fc5b727a7bd0c5e8fe336718fa1e190dab824951a47dfe2a"
+      },
+      "run_dir": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/v1_regression_seed33",
+      "seed": 33,
+      "warmup_manifest_hash": "3dc1c9f14d82bf85fb00b3288cd625facfe6f3a4541ba09247759a10d407c826"
+    },
+    {
+      "candidate_count": 102,
+      "candidate_count_by_agent": [
+        17,
+        17,
+        17,
+        17,
+        17,
+        17
+      ],
+      "completion_negative": 0,
+      "completion_positive": 102,
+      "exact_restricted_value": 6082634.0,
+      "online_artifact_audit": {
+        "available": true,
+        "duplicate_logical_reveals": 152,
+        "prediction_count": 576,
+        "proposal_count": 576,
+        "proposal_reveal_coverage": 0.2361111111111111,
+        "raw_reveal_rows": 288,
+        "source_hashes": {
+          "prediction_manifest": "9d983f93b9bf03df6cdc0353a3c939bd6b103e64f540ce0d7c89f47150262716",
+          "proposal_manifest": "f3536032996491ff9a031af1424da96ff11db19cf5ef498b4454ad60acaef730",
+          "reveal_ledger": "8c8230e8d7a39a23b93b14ee521d3c71dbf30c525ea04e6a435bc8d85786a2b8"
+        },
+        "unique_reveal_labels": 136
+      },
+      "pressure_coverage": 0.1271212588707189,
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "quartet_hashes": {
+        "0": "f52a3c5e5fee30dfb91206cfb3864e3386bbc4ce21f18d1484212c33131dbdc0",
+        "1": "d4b08228a36e8d3489a30d47bb9d6e4100dd8c50a0bf42d151ef914dbc7f8bd3",
+        "2": "392d94ec1e1d2f8ec823f6c8170729626e0627d49214ee97bbcd63191c35b3d7",
+        "3": "ef19e7c53d132a5321a13ba35ba5636f58ea01345c4cadfef698fd6ebd73e6fe",
+        "4": "30f5330eeb068e1fdfeb9bd529ee8db3aa91a5c2b2acec7151a3f78386e2efaf",
+        "5": "0e01216042a57b27fc5b727a7bd0c5e8fe336718fa1e190dab824951a47dfe2a"
+      },
+      "run_dir": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/v1_regression_seed11",
+      "seed": 11,
+      "warmup_manifest_hash": "77239ebf705c78ad04916835c8724387ce6d7bea80e3226fa42c1b0014369b4f"
+    },
+    {
+      "candidate_count": 102,
+      "candidate_count_by_agent": [
+        17,
+        17,
+        17,
+        17,
+        17,
+        17
+      ],
+      "completion_negative": 0,
+      "completion_positive": 102,
+      "exact_restricted_value": 6080946.0,
+      "online_artifact_audit": {
+        "available": true,
+        "duplicate_logical_reveals": 147,
+        "prediction_count": 576,
+        "proposal_count": 576,
+        "proposal_reveal_coverage": 0.24479166666666666,
+        "raw_reveal_rows": 288,
+        "source_hashes": {
+          "prediction_manifest": "fa3908eba97f808c21221530a96ae3c0c3a188d46c092a9e1cd004274f78ae78",
+          "proposal_manifest": "9c1b93c701a3d65d2f115c271b4271fd4cb4e9c8f64a710fc98913fbad35cd25",
+          "reveal_ledger": "6025345c06fce023476705c44c4d09b1ea0a9f5b3d378dd1bf51a81569c7f610"
+        },
+        "unique_reveal_labels": 141
+      },
+      "pressure_coverage": 0.1271212588707189,
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "quartet_hashes": {
+        "0": "f52a3c5e5fee30dfb91206cfb3864e3386bbc4ce21f18d1484212c33131dbdc0",
+        "1": "d4b08228a36e8d3489a30d47bb9d6e4100dd8c50a0bf42d151ef914dbc7f8bd3",
+        "2": "392d94ec1e1d2f8ec823f6c8170729626e0627d49214ee97bbcd63191c35b3d7",
+        "3": "ef19e7c53d132a5321a13ba35ba5636f58ea01345c4cadfef698fd6ebd73e6fe",
+        "4": "30f5330eeb068e1fdfeb9bd529ee8db3aa91a5c2b2acec7151a3f78386e2efaf",
+        "5": "0e01216042a57b27fc5b727a7bd0c5e8fe336718fa1e190dab824951a47dfe2a"
+      },
+      "run_dir": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/v1_regression_seed22",
+      "seed": 22,
+      "warmup_manifest_hash": "4b0007a8e9d8e73c3bb69f7abff37041c064c0ef1722fe1ae77b3899858dcabb"
+    }
+  ],
+  "schema_version": 2,
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88
+  ],
+  "teacher": "warmup_exact_chain_maxsum"
+}

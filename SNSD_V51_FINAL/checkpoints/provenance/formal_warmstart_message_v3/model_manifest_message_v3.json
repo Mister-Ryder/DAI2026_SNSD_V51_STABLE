@@ -1,0 +1,123 @@
+{
+  "best_epoch": 43,
+  "best_validation_loss": 9.34693698088328,
+  "candidate_objective_in_own_message": false,
+  "checkpoint": "/root/autodl-tmp/DAI2026_SNSD_V15/checkpoints/message_v3_trial_a/checkpoint_message_v3.pt",
+  "checkpoint_hash": "46dea02bdc1fb656dcde6beaef52174cb49d6952140715f351e51a4bebbd34a6",
+  "completion_warning": "warmup completion labels are single-class and cannot support AUROC",
+  "encoder_training": "frozen; runtime_v2.prepare states are detached",
+  "expected_parameter_count": 456075,
+  "message_encoder_training": "frozen random projection; heads trained on Real/Zero paired embeddings",
+  "message_variants": [
+    "Real",
+    "Zero"
+  ],
+  "parameter_count": 456075,
+  "prequery_objective_used": false,
+  "pressure_policy": "unidentifiable pressure transported as value=0, uncertainty=1; excluded from pressure regression",
+  "real_target": "cross-fitted exact best-completion advantage/externality",
+  "schema_version": 3,
+  "split": {
+    "available_seeds": [
+      11,
+      22,
+      33,
+      44,
+      55,
+      66,
+      77,
+      88
+    ],
+    "missing_requested_seeds": [],
+    "same_instance_scope": "trajectory/worker-seed robustness on one C3 instance; not cross-instance generalization",
+    "schema_version": 2,
+    "seed_overlap": false,
+    "split_unit": "seed",
+    "test_seeds": [
+      11,
+      22
+    ],
+    "train_seeds": [
+      44,
+      55,
+      66,
+      77,
+      88
+    ],
+    "validation_seeds": [
+      33
+    ]
+  },
+  "strict_load_verified": true,
+  "test_metrics": {
+    "arc_pressure_loss": 2.026020288389797,
+    "candidate_count": 186.0,
+    "delta_sign_accuracy": 1.0,
+    "delta_sign_correct": 96.0,
+    "delta_sign_count": 96.0,
+    "groups": 24.0,
+    "loss": 10.856001953283945,
+    "paired_delta_loss": 1.9049572421269356,
+    "paired_delta_mae": 1.2750048437931885,
+    "pressure_count": 1648.0,
+    "real_loss": 5.560385634501775,
+    "real_rank_accuracy": 0.6171761280931587,
+    "real_rank_correct": 424.0,
+    "real_rank_pairs": 687.0,
+    "real_zero_delta_abs_mean": 26.426190803370748,
+    "shuffled_rank_accuracy": NaN,
+    "target_externality_abs_mean": 27.45009422302246,
+    "zero_loss": 3.390659128626188,
+    "zero_rank_accuracy": 0.611353711790393,
+    "zero_rank_correct": 420.0,
+    "zero_rank_pairs": 687.0
+  },
+  "trainable_parameter_count": 105735,
+  "trainer_config": {
+    "device": "cuda:0",
+    "epochs": 100,
+    "gradient_clip": 5.0,
+    "include_shuffled": false,
+    "learning_rate": 0.001,
+    "loss_weights": {
+      "advantage": 1.0,
+      "arc_pressure": 0.5,
+      "completion": 0.25,
+      "externality": 1.0,
+      "local_gain": 1.0,
+      "ranking": 0.5,
+      "uncertainty": 0.1
+    },
+    "paired_delta_weight": 1.0,
+    "patience": 15,
+    "seed": 20260803,
+    "shuffled_weight": 0.25,
+    "weight_decay": 1e-05,
+    "zero_weight": 1.0
+  },
+  "training_mode": "frozen_encoder_crossfit_exact_teacher_real_zero_paired_message_warmstart_v3",
+  "validation_metrics": {
+    "arc_pressure_loss": 1.965918551509579,
+    "candidate_count": 93.0,
+    "delta_sign_accuracy": 1.0,
+    "delta_sign_correct": 48.0,
+    "delta_sign_count": 48.0,
+    "groups": 12.0,
+    "loss": 9.34693698088328,
+    "paired_delta_loss": 1.205921944646737,
+    "paired_delta_mae": 0.8098156115350624,
+    "pressure_count": 824.0,
+    "real_loss": 4.708835979302724,
+    "real_rank_accuracy": 0.6497175141242938,
+    "real_rank_correct": 230.0,
+    "real_rank_pairs": 354.0,
+    "real_zero_delta_abs_mean": 26.372263415250927,
+    "shuffled_rank_accuracy": NaN,
+    "target_externality_abs_mean": 26.76647885640462,
+    "zero_loss": 3.432179182767868,
+    "zero_rank_accuracy": 0.6694915254237288,
+    "zero_rank_correct": 237.0,
+    "zero_rank_pairs": 354.0
+  },
+  "zero_target": "local_gain with externality=0"
+}

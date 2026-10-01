@@ -1,0 +1,290 @@
+{
+  "advantage_label_count": 1392,
+  "candidate_count": 1392,
+  "completion_is_degenerate": true,
+  "completion_label_count": 1392,
+  "completion_negative": 0,
+  "completion_positive": 1392,
+  "cut_edges": 8980,
+  "data_hash": "ec95f50c11d800f051e218aa1e414df873ddd12e1f71ce911da3ba28adff647e",
+  "data_path": "/root/autodl-tmp/TEVC打包-西北B区  875机 2d9d419d8f-7dcc6ebc/875-codex/data/C3.csv",
+  "dataset_hash": "0b250cceb17d4ea757f6b58c0bd4f2ca9bf5bb69e19d9759e9f220c02c046975",
+  "externality_label_count": 1392,
+  "grain": "one row per (seed, round=-1, agent_id, signature_hash)",
+  "graph_edges": 979960,
+  "graph_nodes": 69923,
+  "join_key": [
+    "seed",
+    "round_id",
+    "agent_id",
+    "signature_hash"
+  ],
+  "local_gain_label_count": 1392,
+  "model_input_contract": "prequery_candidates.jsonl contains no objective-valued field",
+  "pressure_coverage": 0.1271212588707189,
+  "pressure_identifiable": 3296,
+  "pressure_missing_policy": "mask_false; never impute zero",
+  "pressure_total": 25928,
+  "runs": [
+    {
+      "candidate_count": 174,
+      "candidate_count_by_agent": [
+        29,
+        29,
+        29,
+        29,
+        29,
+        29
+      ],
+      "completion_negative": 0,
+      "completion_positive": 174,
+      "exact_restricted_value": 6083331.0,
+      "online_artifact_audit": {
+        "available": false
+      },
+      "pressure_coverage": 0.1271212588707189,
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "quartet_hashes": {
+        "0": "eaffbed38d61abf509540ac82ec5d65366538c573d0313131f3ff72e262aca75",
+        "1": "6054b5b8c17cea5fbb44c379800922ae146c0b5776b10aa27e24616ef8ed1d18",
+        "2": "5c7a82ff3b51d74d7a85e0e1c1ef6bc6d10023ea3f4f4bfc60128f765106afee",
+        "3": "a6061729383c698995d1c5edbe6cae5380a70fde73fa4f8032aaf5e5e5696505",
+        "4": "33cc44d5c30f5ed349fdfcd467c58ebd9ec40b76c57f5f46b4af6e4935331ff9",
+        "5": "7d8dc3a1e95b6b7b30f61d3539ed4edf08c16407da152d66739d657c365f33b2"
+      },
+      "run_dir": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/warmup_teacher_strict/strict_depth12_q7_seed44",
+      "seed": 44,
+      "warmup_manifest_hash": "5678d8a4677da0ff50d2d20ffe1f6e7afbfc2bdbe8db5278d065596fc29bcc3d"
+    },
+    {
+      "candidate_count": 174,
+      "candidate_count_by_agent": [
+        29,
+        29,
+        29,
+        29,
+        29,
+        29
+      ],
+      "completion_negative": 0,
+      "completion_positive": 174,
+      "exact_restricted_value": 6079490.0,
+      "online_artifact_audit": {
+        "available": false
+      },
+      "pressure_coverage": 0.1271212588707189,
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "quartet_hashes": {
+        "0": "eaffbed38d61abf509540ac82ec5d65366538c573d0313131f3ff72e262aca75",
+        "1": "6054b5b8c17cea5fbb44c379800922ae146c0b5776b10aa27e24616ef8ed1d18",
+        "2": "5c7a82ff3b51d74d7a85e0e1c1ef6bc6d10023ea3f4f4bfc60128f765106afee",
+        "3": "a6061729383c698995d1c5edbe6cae5380a70fde73fa4f8032aaf5e5e5696505",
+        "4": "33cc44d5c30f5ed349fdfcd467c58ebd9ec40b76c57f5f46b4af6e4935331ff9",
+        "5": "7d8dc3a1e95b6b7b30f61d3539ed4edf08c16407da152d66739d657c365f33b2"
+      },
+      "run_dir": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/warmup_teacher_strict/strict_depth12_q7_seed55",
+      "seed": 55,
+      "warmup_manifest_hash": "df6340b686c0e1f16a2461a0ff8e38539c97fc7f247ec8e304be53347abeeaac"
+    },
+    {
+      "candidate_count": 174,
+      "candidate_count_by_agent": [
+        29,
+        29,
+        29,
+        29,
+        29,
+        29
+      ],
+      "completion_negative": 0,
+      "completion_positive": 174,
+      "exact_restricted_value": 6087307.0,
+      "online_artifact_audit": {
+        "available": false
+      },
+      "pressure_coverage": 0.1271212588707189,
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "quartet_hashes": {
+        "0": "eaffbed38d61abf509540ac82ec5d65366538c573d0313131f3ff72e262aca75",
+        "1": "6054b5b8c17cea5fbb44c379800922ae146c0b5776b10aa27e24616ef8ed1d18",
+        "2": "5c7a82ff3b51d74d7a85e0e1c1ef6bc6d10023ea3f4f4bfc60128f765106afee",
+        "3": "a6061729383c698995d1c5edbe6cae5380a70fde73fa4f8032aaf5e5e5696505",
+        "4": "33cc44d5c30f5ed349fdfcd467c58ebd9ec40b76c57f5f46b4af6e4935331ff9",
+        "5": "7d8dc3a1e95b6b7b30f61d3539ed4edf08c16407da152d66739d657c365f33b2"
+      },
+      "run_dir": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/warmup_teacher_strict/strict_depth12_q7_seed66",
+      "seed": 66,
+      "warmup_manifest_hash": "1d91d76d5a2f0cec5ba16272effe13d36202edb37fef1e567ff7fb27e62303c8"
+    },
+    {
+      "candidate_count": 174,
+      "candidate_count_by_agent": [
+        29,
+        29,
+        29,
+        29,
+        29,
+        29
+      ],
+      "completion_negative": 0,
+      "completion_positive": 174,
+      "exact_restricted_value": 6081503.0,
+      "online_artifact_audit": {
+        "available": false
+      },
+      "pressure_coverage": 0.1271212588707189,
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "quartet_hashes": {
+        "0": "eaffbed38d61abf509540ac82ec5d65366538c573d0313131f3ff72e262aca75",
+        "1": "6054b5b8c17cea5fbb44c379800922ae146c0b5776b10aa27e24616ef8ed1d18",
+        "2": "5c7a82ff3b51d74d7a85e0e1c1ef6bc6d10023ea3f4f4bfc60128f765106afee",
+        "3": "a6061729383c698995d1c5edbe6cae5380a70fde73fa4f8032aaf5e5e5696505",
+        "4": "33cc44d5c30f5ed349fdfcd467c58ebd9ec40b76c57f5f46b4af6e4935331ff9",
+        "5": "7d8dc3a1e95b6b7b30f61d3539ed4edf08c16407da152d66739d657c365f33b2"
+      },
+      "run_dir": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/warmup_teacher_strict/strict_depth12_q7_seed77",
+      "seed": 77,
+      "warmup_manifest_hash": "9bdeba27f3e9ae3fd2e36b8ba593cae94b7e20232157b901b31bb8bcf805e3df"
+    },
+    {
+      "candidate_count": 174,
+      "candidate_count_by_agent": [
+        29,
+        29,
+        29,
+        29,
+        29,
+        29
+      ],
+      "completion_negative": 0,
+      "completion_positive": 174,
+      "exact_restricted_value": 6084153.0,
+      "online_artifact_audit": {
+        "available": false
+      },
+      "pressure_coverage": 0.1271212588707189,
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "quartet_hashes": {
+        "0": "eaffbed38d61abf509540ac82ec5d65366538c573d0313131f3ff72e262aca75",
+        "1": "6054b5b8c17cea5fbb44c379800922ae146c0b5776b10aa27e24616ef8ed1d18",
+        "2": "5c7a82ff3b51d74d7a85e0e1c1ef6bc6d10023ea3f4f4bfc60128f765106afee",
+        "3": "a6061729383c698995d1c5edbe6cae5380a70fde73fa4f8032aaf5e5e5696505",
+        "4": "33cc44d5c30f5ed349fdfcd467c58ebd9ec40b76c57f5f46b4af6e4935331ff9",
+        "5": "7d8dc3a1e95b6b7b30f61d3539ed4edf08c16407da152d66739d657c365f33b2"
+      },
+      "run_dir": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/warmup_teacher_strict/strict_depth12_q7_seed88",
+      "seed": 88,
+      "warmup_manifest_hash": "2610b80459940e32e0824bbaf82b5f4710a244838f01978720fe8b1f17f4cdf7"
+    },
+    {
+      "candidate_count": 174,
+      "candidate_count_by_agent": [
+        29,
+        29,
+        29,
+        29,
+        29,
+        29
+      ],
+      "completion_negative": 0,
+      "completion_positive": 174,
+      "exact_restricted_value": 6083035.0,
+      "online_artifact_audit": {
+        "available": false
+      },
+      "pressure_coverage": 0.1271212588707189,
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "quartet_hashes": {
+        "0": "eaffbed38d61abf509540ac82ec5d65366538c573d0313131f3ff72e262aca75",
+        "1": "6054b5b8c17cea5fbb44c379800922ae146c0b5776b10aa27e24616ef8ed1d18",
+        "2": "5c7a82ff3b51d74d7a85e0e1c1ef6bc6d10023ea3f4f4bfc60128f765106afee",
+        "3": "a6061729383c698995d1c5edbe6cae5380a70fde73fa4f8032aaf5e5e5696505",
+        "4": "33cc44d5c30f5ed349fdfcd467c58ebd9ec40b76c57f5f46b4af6e4935331ff9",
+        "5": "7d8dc3a1e95b6b7b30f61d3539ed4edf08c16407da152d66739d657c365f33b2"
+      },
+      "run_dir": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/warmup_teacher_strict/strict_depth12_q7_seed33",
+      "seed": 33,
+      "warmup_manifest_hash": "89c962519adbb6591da3bda35a9c0c60f20e0bc650d6048887bbec5d9fdcf85f"
+    },
+    {
+      "candidate_count": 174,
+      "candidate_count_by_agent": [
+        29,
+        29,
+        29,
+        29,
+        29,
+        29
+      ],
+      "completion_negative": 0,
+      "completion_positive": 174,
+      "exact_restricted_value": 6083002.0,
+      "online_artifact_audit": {
+        "available": false
+      },
+      "pressure_coverage": 0.1271212588707189,
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "quartet_hashes": {
+        "0": "eaffbed38d61abf509540ac82ec5d65366538c573d0313131f3ff72e262aca75",
+        "1": "6054b5b8c17cea5fbb44c379800922ae146c0b5776b10aa27e24616ef8ed1d18",
+        "2": "5c7a82ff3b51d74d7a85e0e1c1ef6bc6d10023ea3f4f4bfc60128f765106afee",
+        "3": "a6061729383c698995d1c5edbe6cae5380a70fde73fa4f8032aaf5e5e5696505",
+        "4": "33cc44d5c30f5ed349fdfcd467c58ebd9ec40b76c57f5f46b4af6e4935331ff9",
+        "5": "7d8dc3a1e95b6b7b30f61d3539ed4edf08c16407da152d66739d657c365f33b2"
+      },
+      "run_dir": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/warmup_teacher_strict/strict_depth12_q7_seed11",
+      "seed": 11,
+      "warmup_manifest_hash": "195d9422e0f7eb9fb511a5bc13d323b412c819cb11e2956358c5430d9eb089fb"
+    },
+    {
+      "candidate_count": 174,
+      "candidate_count_by_agent": [
+        29,
+        29,
+        29,
+        29,
+        29,
+        29
+      ],
+      "completion_negative": 0,
+      "completion_positive": 174,
+      "exact_restricted_value": 6081669.0,
+      "online_artifact_audit": {
+        "available": false
+      },
+      "pressure_coverage": 0.1271212588707189,
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "quartet_hashes": {
+        "0": "eaffbed38d61abf509540ac82ec5d65366538c573d0313131f3ff72e262aca75",
+        "1": "6054b5b8c17cea5fbb44c379800922ae146c0b5776b10aa27e24616ef8ed1d18",
+        "2": "5c7a82ff3b51d74d7a85e0e1c1ef6bc6d10023ea3f4f4bfc60128f765106afee",
+        "3": "a6061729383c698995d1c5edbe6cae5380a70fde73fa4f8032aaf5e5e5696505",
+        "4": "33cc44d5c30f5ed349fdfcd467c58ebd9ec40b76c57f5f46b4af6e4935331ff9",
+        "5": "7d8dc3a1e95b6b7b30f61d3539ed4edf08c16407da152d66739d657c365f33b2"
+      },
+      "run_dir": "/root/autodl-tmp/DAI2026_SNSD_V15/runs/warmup_teacher_strict/strict_depth12_q7_seed22",
+      "seed": 22,
+      "warmup_manifest_hash": "8c0daacc928416b6c99b5ae3bc8e62d9a599b41d5c93681b465e940cbd03da32"
+    }
+  ],
+  "schema_version": 2,
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55,
+    66,
+    77,
+    88
+  ],
+  "teacher": "warmup_exact_chain_maxsum"
+}

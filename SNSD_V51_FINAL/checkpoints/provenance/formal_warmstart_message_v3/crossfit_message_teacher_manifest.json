@@ -1,0 +1,569 @@
+{
+  "candidate_objective_in_own_message": false,
+  "folds": [
+    {
+      "candidate_objective_in_own_message": false,
+      "fold_count": 2,
+      "heldout_fold": 0,
+      "message_hashes": {
+        "0": "140af0b105b3388fbc0bad85720a56355b1575a67670abcc168a78cc8203700f",
+        "1": "cb1e6ed55881861e7ab622d676f7e7cee6bbd87c4001629267b9d2b8fffffc2f",
+        "2": "ce031d3adb67b8549f77b9da503f33781efe7badbcf4381fe6fd65ac41b30eee",
+        "3": "e435f07e2a742a015a54ee54541e832225778a585e85649e98bc3d1b52db2100",
+        "4": "7cbb4e0d7a139adab904e39ffdd429fba4cf46c0baa426455bb7223edf26dfa1",
+        "5": "aef479cd610b95d97c4409764247c61c62d8e86d525128f90b910142e224afe7"
+      },
+      "message_source_candidate_counts": {
+        "0": 11,
+        "1": 12,
+        "2": 9,
+        "3": 10,
+        "4": 12,
+        "5": 6
+      },
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "seed": 11,
+      "source_signature_hash": "2afadfe3f0b898515439d966a291d73ec49caa12c8898531b93a6215426b4f9a",
+      "target_candidate_counts": {
+        "0": 6,
+        "1": 5,
+        "2": 8,
+        "3": 7,
+        "4": 5,
+        "5": 11
+      },
+      "target_count": 42,
+      "target_signature_hash": "df9f6fbbf895ff00178a129c360481c405effc772c143d5d3372d41818441c74"
+    },
+    {
+      "candidate_objective_in_own_message": false,
+      "fold_count": 2,
+      "heldout_fold": 1,
+      "message_hashes": {
+        "0": "99248dff99e22b22f6f54551b94b8f03dce19ada2fc8a0c1ae5a18e420980304",
+        "1": "965ab8f76138e5783444677ce9423b9b705555bfa12a5f2c558e64e805281f7d",
+        "2": "190336c5b687e38795d87497b4380e609f8f3814c5f746cbc3987dde79a1cfbf",
+        "3": "f9b90c07b2e6f659796ccdf4865cc8c6e2fd2ec40f0fe1b16ca57942a3795e96",
+        "4": "f382c0b5ffbf5c4ce7ed876bf2d6cd5c170247967bd9c042579b365187987959",
+        "5": "16b7bda7aa689344b806c679e4c015a02c14f5854c9fc884e4dd123e49777fd2"
+      },
+      "message_source_candidate_counts": {
+        "0": 7,
+        "1": 7,
+        "2": 9,
+        "3": 9,
+        "4": 6,
+        "5": 13
+      },
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "seed": 11,
+      "source_signature_hash": "d8a605f8bf4b64d0222d1bd4320642c0c863624c369489d7d2edece1a8b9a3b8",
+      "target_candidate_counts": {
+        "0": 10,
+        "1": 10,
+        "2": 8,
+        "3": 8,
+        "4": 11,
+        "5": 4
+      },
+      "target_count": 51,
+      "target_signature_hash": "16bee9d2e402f556ef43faf2fdaaa65bc4336178a85b129f8ad6e4e2690ff241"
+    },
+    {
+      "candidate_objective_in_own_message": false,
+      "fold_count": 2,
+      "heldout_fold": 0,
+      "message_hashes": {
+        "0": "3b14078c7106482999409b6f36661be79773659ecc860fdea4755830401d74c9",
+        "1": "9d0c2a5cff381dfbe2185085cb649bb5b997d71e4ee66e2842dab8c36512b4e5",
+        "2": "3a4018c7c017dd5a3e69217de062ed721735dbdbbff534ef3c647e678378f2e6",
+        "3": "a69e2ae76900788fb6b36725c48a9570fcfc10cb47576f815bf5c0ad1768cbc7",
+        "4": "39b3e4cf080ca19984c357b0b77685bf7dd7ab9e75fbf75964619008add8dbf8",
+        "5": "f44172d12cf03c1686a65ec4421ad197b72dc45ff630eb0de29a8b1c6d7cace0"
+      },
+      "message_source_candidate_counts": {
+        "0": 11,
+        "1": 11,
+        "2": 9,
+        "3": 10,
+        "4": 12,
+        "5": 6
+      },
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "seed": 22,
+      "source_signature_hash": "1820ed3772d92df91f6ee538168e39284a527dae8fe44fd14e3354de9c870a4e",
+      "target_candidate_counts": {
+        "0": 6,
+        "1": 6,
+        "2": 8,
+        "3": 7,
+        "4": 5,
+        "5": 11
+      },
+      "target_count": 43,
+      "target_signature_hash": "94216e94b93be513bbe1cfad24e76bfc4fc3ae7027d8c7484ae1eabfde8e0a86"
+    },
+    {
+      "candidate_objective_in_own_message": false,
+      "fold_count": 2,
+      "heldout_fold": 1,
+      "message_hashes": {
+        "0": "f56aba60b682f2759adfdc33be102e2fd962124d968897784110b59dea2adbd1",
+        "1": "4005110e0feb5de05dc447200633e7bb3d4e3409b4506a93ec42595de98d882a",
+        "2": "4ce1bb25b798a25e3be9ac336ca83e93159d37ffeddad3eb5cf7c273651b16b8",
+        "3": "a34fb8f7664798ddf5b690c77f0207c5ae42f8a9a4803c180d541c8dd7cc3511",
+        "4": "eaa880e266f3d700ae63b0cca30ef3d53fe4201481e3fa87df7ee59751fcc8d9",
+        "5": "600e632a993c215a06cf0476f4e31bfe503fda0154b4533513bbdef1fc097b79"
+      },
+      "message_source_candidate_counts": {
+        "0": 7,
+        "1": 8,
+        "2": 9,
+        "3": 9,
+        "4": 6,
+        "5": 13
+      },
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "seed": 22,
+      "source_signature_hash": "08e6bfacf3afec737ca1d970d25f3879e576a7e4078f2762fc55b956e6734d34",
+      "target_candidate_counts": {
+        "0": 10,
+        "1": 9,
+        "2": 8,
+        "3": 8,
+        "4": 11,
+        "5": 4
+      },
+      "target_count": 50,
+      "target_signature_hash": "1f9e28f1c94ae0c854396545545d62fdc9e41a7a0226b358400e37d312a80573"
+    },
+    {
+      "candidate_objective_in_own_message": false,
+      "fold_count": 2,
+      "heldout_fold": 0,
+      "message_hashes": {
+        "0": "02775df6721cdd93cfc12fe656d03e4d3b48628106a9e318e4755558ea0c660d",
+        "1": "b6348adffb3bb1f7ef5503039f5fb778f4900c4aa9a95e3a8f2e37f326980b1e",
+        "2": "3cfd9b868d673949253b7cbb636b3b39b3c57bb3cdfbf0f46f1ccab437156c0f",
+        "3": "44cc43223c56a3e20b75ee4f05943664f64e30e10450b2ea37ec319dd5a95b39",
+        "4": "a8fc11cbc5fe90c52137ebac78bf7c0529c8d0fcd3604ba7d3690eaf7a61316f",
+        "5": "a092abbe0eae76496f23c0317d7bf4d3de196d4f974d393a02e8e2727b580781"
+      },
+      "message_source_candidate_counts": {
+        "0": 11,
+        "1": 12,
+        "2": 9,
+        "3": 10,
+        "4": 12,
+        "5": 5
+      },
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "seed": 33,
+      "source_signature_hash": "43dcf400bbdf04c9dafef0bd8fb4f4efe1171a1db4b1c64479c3bd26995fb86c",
+      "target_candidate_counts": {
+        "0": 6,
+        "1": 5,
+        "2": 8,
+        "3": 7,
+        "4": 5,
+        "5": 12
+      },
+      "target_count": 43,
+      "target_signature_hash": "48e9072351f501f052efe5a31328fadbf47daf68c4d2b5d7bb299e771848a0a5"
+    },
+    {
+      "candidate_objective_in_own_message": false,
+      "fold_count": 2,
+      "heldout_fold": 1,
+      "message_hashes": {
+        "0": "30e6a88b3302fdcfc7afa93797ee81e80b58e32dd2c99bce9e95bf02a60b7b64",
+        "1": "b785d035710e6d85e2447bb97f97df940d5b1dd73758bcc6847b8055776b81f7",
+        "2": "29ac7e42a9fb44e136b9c396fea8f7972d077ca430e0ca0c8586b2d5b1e37f19",
+        "3": "ecd84c5dd1968b010967b934ec3084382145457be436d83ff5646a4cc8025022",
+        "4": "d4d44818c5f6006fc22d0d8ef1f5c08df69d6bf36e795528e5a8b3a9be5992be",
+        "5": "4224b6bd3b47e537ed37ced3a2b9a41dc996fae485c7339b07bed9e6e127d4cd"
+      },
+      "message_source_candidate_counts": {
+        "0": 7,
+        "1": 7,
+        "2": 9,
+        "3": 9,
+        "4": 6,
+        "5": 14
+      },
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "seed": 33,
+      "source_signature_hash": "e27aa78b305d4cf5fc076ad292a289eac24d57a041c57a760b6d8f9bbb53e691",
+      "target_candidate_counts": {
+        "0": 10,
+        "1": 10,
+        "2": 8,
+        "3": 8,
+        "4": 11,
+        "5": 3
+      },
+      "target_count": 50,
+      "target_signature_hash": "ccd6a2aadac5bbd7050ad059ed85c33da77c3bf384f6655bdc1c26e50829d2e5"
+    },
+    {
+      "candidate_objective_in_own_message": false,
+      "fold_count": 2,
+      "heldout_fold": 0,
+      "message_hashes": {
+        "0": "b4dd95133dfcdd449c94ab96d95ae928c2f3a3e199c99722c7f6529f996bc622",
+        "1": "bb3c8ae71230f699e393bbcd1174d9ad37175d6ea3d15c3e7fec52a987022277",
+        "2": "81d93775e1730e2915da37edee432f4f07b48a2b89ea91e9db0df93e5abe9369",
+        "3": "d1965ccfdbb13c8b85e98692d6b0f3fc06c0d2def858df61253a942b7a2c3c12",
+        "4": "c983fbeee3c8f5d6d605dc4b466b252304c7a597b490b3780951c9bd69ae0ffb",
+        "5": "9f5d33d3a96097583121e663fb6f4b693a771456f04325293db837b5ecb73aa3"
+      },
+      "message_source_candidate_counts": {
+        "0": 11,
+        "1": 11,
+        "2": 9,
+        "3": 10,
+        "4": 12,
+        "5": 5
+      },
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "seed": 44,
+      "source_signature_hash": "5c0fd00e9f8e48a10ee4c2146767093b7bfb6913e18ac7d26da908f2d0dfef67",
+      "target_candidate_counts": {
+        "0": 6,
+        "1": 6,
+        "2": 8,
+        "3": 7,
+        "4": 5,
+        "5": 12
+      },
+      "target_count": 44,
+      "target_signature_hash": "94cabba98f5f3c3f1a433132d03634fc9a0422136f9acd7b43b086dcff030da3"
+    },
+    {
+      "candidate_objective_in_own_message": false,
+      "fold_count": 2,
+      "heldout_fold": 1,
+      "message_hashes": {
+        "0": "1ce00f3bd22c7a7e1f76dbfce82a75ea4d3d148f9e11f1507934fcde865bc96c",
+        "1": "ec05b54a10bd9f4194918aa2b039338981d27fc0372a03758a4b02fe185f6bb3",
+        "2": "0b2bab16cfe6b5ccc4ed1d47994aae6e5bed3f371a1b5138adb3b74ca392e286",
+        "3": "385ddf5df43aca376b36dcd3d049965e631971e0519023a40869f6bebb4f73fa",
+        "4": "1443031e4d2f8c4a2b789d95b91cad4262bbf8da2fe4c21d877274a731ead578",
+        "5": "d81950dd8b9ad0d6781b72311b2e872e1881881baf1dc7617ea0a32f664557ae"
+      },
+      "message_source_candidate_counts": {
+        "0": 8,
+        "1": 7,
+        "2": 10,
+        "3": 8,
+        "4": 7,
+        "5": 13
+      },
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "seed": 44,
+      "source_signature_hash": "5f75db1dd126ef0f3c70405654663cba2c15f63387d7745bf14eb931eab54cc8",
+      "target_candidate_counts": {
+        "0": 9,
+        "1": 10,
+        "2": 7,
+        "3": 9,
+        "4": 10,
+        "5": 4
+      },
+      "target_count": 49,
+      "target_signature_hash": "87536b3e936309a2a2f25654ffd1e3b623de444e94dbfbc8fe44d2d0523d8e5d"
+    },
+    {
+      "candidate_objective_in_own_message": false,
+      "fold_count": 2,
+      "heldout_fold": 0,
+      "message_hashes": {
+        "0": "d5a1e38de58351b5fb00c7972671f23c8ba1a351932dd17e760d3ede11483332",
+        "1": "6300f4264e4d6dde1b12ca8d686802549f367027e6bb23b5ad344cae41f33f59",
+        "2": "b514be9e4421016b8600d752b209032b20c9514f8fb63fbe07a61c99d1cebab0",
+        "3": "f858d7bd08add5377d987027e9f286fb0c0fcd8470050df858b3e2c37ed13a2b",
+        "4": "d942ede9f903dcb6ec63478f3262abac5047c13c1f53dff60e03c6b89d0b566b",
+        "5": "b6da37a6f997d8e1482042625dd5843f11e0dcaaf07b7cf64fae1de5b5cf1c1b"
+      },
+      "message_source_candidate_counts": {
+        "0": 11,
+        "1": 11,
+        "2": 9,
+        "3": 10,
+        "4": 12,
+        "5": 5
+      },
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "seed": 55,
+      "source_signature_hash": "5c0fd00e9f8e48a10ee4c2146767093b7bfb6913e18ac7d26da908f2d0dfef67",
+      "target_candidate_counts": {
+        "0": 6,
+        "1": 6,
+        "2": 8,
+        "3": 7,
+        "4": 5,
+        "5": 12
+      },
+      "target_count": 44,
+      "target_signature_hash": "94cabba98f5f3c3f1a433132d03634fc9a0422136f9acd7b43b086dcff030da3"
+    },
+    {
+      "candidate_objective_in_own_message": false,
+      "fold_count": 2,
+      "heldout_fold": 1,
+      "message_hashes": {
+        "0": "bce79893bbd27dd732aa8bc6c7e842b6f9af9a219df2d0b07d914c4bb1e60807",
+        "1": "872320f8f4834c277533be89bc6209d71305169592113c058c8b7f4c4437f3fd",
+        "2": "05dfcf4c7eeb2556fd3b12e10c015884911f276fa9295e3a6e03df69b574a185",
+        "3": "6b37bf07f8b7913743cb94ab82d0430eb65ad7c5545721164a2b759e40a55cd0",
+        "4": "099d871050b8dcc04a1cfd3b3ec20c82bf7cd6b66d3e98c1708a43f14b23bac8",
+        "5": "0b8ad665b7fa2265f01d90fe4e445c62ffa37975772038a3ddc30604c61e6b93"
+      },
+      "message_source_candidate_counts": {
+        "0": 7,
+        "1": 8,
+        "2": 9,
+        "3": 9,
+        "4": 6,
+        "5": 14
+      },
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "seed": 55,
+      "source_signature_hash": "20c038bb3cbb1b5ba16c92b8dc854a155f7781e4263ba33c54b751c8baafbc46",
+      "target_candidate_counts": {
+        "0": 10,
+        "1": 9,
+        "2": 8,
+        "3": 8,
+        "4": 11,
+        "5": 3
+      },
+      "target_count": 49,
+      "target_signature_hash": "40359308798090b22f6990219f0851c43cd8cc4446df73bca088c03fe93e7d6c"
+    },
+    {
+      "candidate_objective_in_own_message": false,
+      "fold_count": 2,
+      "heldout_fold": 0,
+      "message_hashes": {
+        "0": "18cda4cf3d42b3c9f052d01e14c00a22f36ae2c1855991025de564140aa4fdea",
+        "1": "c4464a6455fcaa6668c6860de200d46adb30b2d4f3afc302536338173d31381e",
+        "2": "51b4dcb64a9140409b121d68b68b7b07e98cdcb13d5a3cbcf47ec25776fd4662",
+        "3": "9d7163a82d671e84790e6fbe3805ba2d934b1330a31efde26fd79c8be6a1e51c",
+        "4": "f6a6ee85f369e6036335f44822393afc931e18f6379aef0df187a9a689444d6b",
+        "5": "cbb6e18159c04bc0ac9a7fca46bdd921ffe42133d3eacb98d3d8c283d9daa8a1"
+      },
+      "message_source_candidate_counts": {
+        "0": 11,
+        "1": 11,
+        "2": 9,
+        "3": 10,
+        "4": 12,
+        "5": 6
+      },
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "seed": 66,
+      "source_signature_hash": "4aed22670e3ae63f11e5ac1a639e921e05e313334a926c512e9f2383398323fa",
+      "target_candidate_counts": {
+        "0": 6,
+        "1": 6,
+        "2": 8,
+        "3": 7,
+        "4": 5,
+        "5": 11
+      },
+      "target_count": 43,
+      "target_signature_hash": "fef3271ed1583a7fb00f0f1899dab0fa40696f1e89465024092d98eda60990ea"
+    },
+    {
+      "candidate_objective_in_own_message": false,
+      "fold_count": 2,
+      "heldout_fold": 1,
+      "message_hashes": {
+        "0": "785930025e38d2ec346ca1a6d170b88db7d01096e4ea7dda1d0bc68b9e70b13a",
+        "1": "421068b651323706d92164b123c302b7087f6c871a7abdfd8e39eb2e4b92f0de",
+        "2": "472e090af814291590ae40503c23ba9fe7a5c69d18e6d49bd350e388ba39cd2f",
+        "3": "77524ffb229d59498cf757b064556999ca56c1de9c8c5953ff3f9d34733cb628",
+        "4": "593320802f3ca38a5504fe60210219cd598a353f4bb703a103a35387288d7c8c",
+        "5": "cd45a699166fad5f774b22a6c26049ce1bd8462e434288b5fbb7f8f8c08ffbca"
+      },
+      "message_source_candidate_counts": {
+        "0": 7,
+        "1": 8,
+        "2": 9,
+        "3": 9,
+        "4": 6,
+        "5": 13
+      },
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "seed": 66,
+      "source_signature_hash": "bb75d5fe7ff196e944b3504754d772f84f2994daaba455af0914319bb3d323d1",
+      "target_candidate_counts": {
+        "0": 10,
+        "1": 9,
+        "2": 8,
+        "3": 8,
+        "4": 11,
+        "5": 4
+      },
+      "target_count": 50,
+      "target_signature_hash": "fa4aed378f0f43a08889396b894fb490dc3ecd7063d54d7e16f1d97bf3e92a04"
+    },
+    {
+      "candidate_objective_in_own_message": false,
+      "fold_count": 2,
+      "heldout_fold": 0,
+      "message_hashes": {
+        "0": "d3f8e6ecc82c49edb521d9e244178ef2b24731224725b4915679f1adc08727e3",
+        "1": "421cf7c90a7c443ce1db1b105c696bdd69d936d9be903c0d3438c025904b2153",
+        "2": "6124988dc1d63832f6d53e81e2b74093091d8814684d37c4e84ff73f5a38a0a6",
+        "3": "0ac5267a8b4fe1fe03192753d00e97e2dbf500f3862335156b2db50b6c24cc33",
+        "4": "2af350b42d9e6865ea5170b0a39036ce7d670142f6a0fd7ffbff1c18afcd16fc",
+        "5": "2230cce053e5122ad1dad032fc77e219e3a23cdc4cadbb103f1c679606ba68ad"
+      },
+      "message_source_candidate_counts": {
+        "0": 12,
+        "1": 11,
+        "2": 10,
+        "3": 10,
+        "4": 13,
+        "5": 5
+      },
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "seed": 77,
+      "source_signature_hash": "0ec3459deebf73a4ab0f647fbf5bb26122f71912b8d7a1e72fb9f19698a744f8",
+      "target_candidate_counts": {
+        "0": 5,
+        "1": 6,
+        "2": 7,
+        "3": 7,
+        "4": 4,
+        "5": 12
+      },
+      "target_count": 41,
+      "target_signature_hash": "4422bfeba2be9561f4107b592cc0724a74a50134828c0f49ade87599dd1c6194"
+    },
+    {
+      "candidate_objective_in_own_message": false,
+      "fold_count": 2,
+      "heldout_fold": 1,
+      "message_hashes": {
+        "0": "cbf5fcfba1936a707e4f43101e3aac1e1eab6f6c956368060d3fdf45cef3cd60",
+        "1": "8b09cb22aec2ff17dfb62383a39ae08a098fdb604bd603a01d8cba5147ecf341",
+        "2": "c94c02397c13a308a0845f4696098ad70508c7faf2dfd8154dee261be638a58e",
+        "3": "2cef795315efb83d81773604cedebb09b70c7dc2516319708c64f905eff9f854",
+        "4": "33091e47a44a60fe4a8e65034539dae93d09642d13e5eed8e4cea2e8c3afb81c",
+        "5": "0a096909310a37910595a7d0805761dc439f7d4ff951e6eac2acf7f887be9ab7"
+      },
+      "message_source_candidate_counts": {
+        "0": 7,
+        "1": 7,
+        "2": 9,
+        "3": 8,
+        "4": 6,
+        "5": 13
+      },
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "seed": 77,
+      "source_signature_hash": "e22cf290c96035e7310e0e265c52bc2ae23601a9f47ef03c40cc60cf8953429b",
+      "target_candidate_counts": {
+        "0": 10,
+        "1": 10,
+        "2": 8,
+        "3": 9,
+        "4": 11,
+        "5": 4
+      },
+      "target_count": 52,
+      "target_signature_hash": "238163a3c4f8be779f36671faf8fc51460ae738e3572c4dc4b7d8f6cd5bc9981"
+    },
+    {
+      "candidate_objective_in_own_message": false,
+      "fold_count": 2,
+      "heldout_fold": 0,
+      "message_hashes": {
+        "0": "85a040a45c861fff17d22e93e81ed1bd5509f918ab64b11a0acdd6ca7ed1bc5e",
+        "1": "93065a30c6127d6e5cccec1dba843747e653e37bd6c3b521e01105cba12099f0",
+        "2": "9c36ab58006de1958562c723bffda293e0908208b8576770b7f6c7f76ca2a974",
+        "3": "b562930499370396d56740e37c9e744c6f48cbce8bfe38b6238cdfec80d865aa",
+        "4": "e374a23b52404f24f5b0bbccecf5d53528f3d8ce395d1855cf8873340c5ba709",
+        "5": "da2550b6ca04047e4ac74db0063f3608414b8ac771b3791f46399ec4cf1df48a"
+      },
+      "message_source_candidate_counts": {
+        "0": 12,
+        "1": 11,
+        "2": 9,
+        "3": 10,
+        "4": 12,
+        "5": 5
+      },
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "seed": 88,
+      "source_signature_hash": "72b27e68c0954b14d45cf79d901f93d32f186a9653d29ab0e01fa9378039bc59",
+      "target_candidate_counts": {
+        "0": 5,
+        "1": 6,
+        "2": 8,
+        "3": 7,
+        "4": 5,
+        "5": 12
+      },
+      "target_count": 43,
+      "target_signature_hash": "cd920feb96dfe0577ec201dea15cc0f3eb97ea6ac3035b5cca0f5d320092a7e3"
+    },
+    {
+      "candidate_objective_in_own_message": false,
+      "fold_count": 2,
+      "heldout_fold": 1,
+      "message_hashes": {
+        "0": "9f0ce152cc8fcd70ee83f7fc5d5635f484ec02df2a5944a5c668de3e28445987",
+        "1": "d691ef3f48f47c5e5b1731a7462a4cef1e7bbfd6ee10cb366c326958286d6d40",
+        "2": "cc944202e7f586b9858ee550e4fa54d1724e9de63a4e863732d8509e9d6653bf",
+        "3": "9c836d0973813213d5d7cd088d2baee2df0d9e4da70501922fe66f6f5ed2743a",
+        "4": "3c1062d4bf4840502dc77d65d08e160c61e573b8ba0f91dda5653999177251af",
+        "5": "37062d358b709c12ac620b76f00eda52727fcad79717fd88e1886c2046af655c"
+      },
+      "message_source_candidate_counts": {
+        "0": 7,
+        "1": 7,
+        "2": 10,
+        "3": 8,
+        "4": 7,
+        "5": 13
+      },
+      "pressure_identifiable": 412,
+      "pressure_total": 3241,
+      "seed": 88,
+      "source_signature_hash": "a8418d96693daa519c032f6052cc61fda7dc5a6b966a71fa0d4862859b441a4c",
+      "target_candidate_counts": {
+        "0": 10,
+        "1": 10,
+        "2": 7,
+        "3": 9,
+        "4": 10,
+        "5": 4
+      },
+      "target_count": 50,
+      "target_signature_hash": "7380e78b40364bfcb4406ef913ab59746d808d53fb56ba1d06da60eb9c541345"
+    }
+  ],
+  "schema_version": 3,
+  "teacher": "crossfit_exact_chain_message_v3",
+  "total_identifiable_pressures": 6592,
+  "total_target_candidates": 744
+}

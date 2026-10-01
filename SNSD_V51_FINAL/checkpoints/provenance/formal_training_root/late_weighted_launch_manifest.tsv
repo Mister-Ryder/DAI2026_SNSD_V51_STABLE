@@ -1,0 +1,2 @@
+pid	gpu	role	init_mode	epochs	patience	step_0_5_weight	step_6_8_weight	step_9_11_weight	pair_priority	priority_pair_weight	target_semantics	selection_split	log	output
+24163	0	late_stage_weighted_main	warmstart	12	4	1	2	3	near_incumbent_and_model_hard_negative	1.0	intrinsic_unchanged	validation_only	/root/autodl-tmp/DAI2026_SNSD_V15/runs/train_v45_strict_fast_main_20260802/late_weighted_warmstart_e2e_lr3e4_eps05_d12_e12.log	/root/autodl-tmp/DAI2026_SNSD_V15/runs/train_v45_strict_fast_main_20260802/late_weighted_warmstart_e2e_lr3e4_eps05_d12_e12
