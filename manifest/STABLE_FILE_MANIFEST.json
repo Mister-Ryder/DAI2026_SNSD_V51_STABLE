@@ -4,10 +4,10 @@
   "file_count": 175,
   "files": [
     {
-      "bytes": 316,
+      "bytes": 484,
       "category": ".gitignore",
       "path": ".gitignore",
-      "sha256": "dc131f51245c799157cd6755019582a17e56396100b4dc740bc18f96cd034c45"
+      "sha256": "6262d32a3ddcda172043d6292ea03cb45620a9ee61d7807cb5835512268466e6"
     },
     {
       "bytes": 4122,
@@ -1042,10 +1042,10 @@
       "sha256": "af143961b24a34579a05d1a6e5f3ca1d22574a93ed144e1a1d8be314b0ab3aff"
     },
     {
-      "bytes": 3804,
+      "bytes": 3866,
       "category": "tools",
       "path": "tools/build_manifest.py",
-      "sha256": "0ecdab1952c3ba9787a7e144ac15a92b7876c1d568a6b0389fde7d7018f1a4db"
+      "sha256": "de734b329f42ee9a5bca7aa54d3733d5505d3e0da513421b5e988a5b69580cc8"
     },
     {
       "bytes": 15049,
@@ -1054,7 +1054,7 @@
       "sha256": "9e922ec18c9c8fde484e9b3e31ac6726609e574bcf82f289bf140425555f3a85"
     }
   ],
-  "generated_utc": "2026-08-03T10:25:08.227056+00:00",
+  "generated_utc": "2026-10-01T17:38:39.481456+00:00",
   "projects": {
     "ablations": "SNSD_V51_ABLATIONS",
     "final": "SNSD_V51_FINAL",
@@ -1062,5 +1062,5 @@
   },
   "root_name": "DAI2026_SNSD_V51_STABLE",
   "schema": "snsd-v5.1-reorganized-stable-file-manifest-v2",
-  "total_bytes": 58790264
+  "total_bytes": 58790494
 }

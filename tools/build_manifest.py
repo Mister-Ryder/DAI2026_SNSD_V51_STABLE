@@ -25,6 +25,8 @@ TRANSIENT_SUFFIXES = {
 
 def is_included(path):
     rel = path.relative_to(ROOT)
+    if rel.parts and rel.parts[0] == ".git":
+        return False
     if rel.parts and rel.parts[0] == "manifest":
         return False
     if "__pycache__" in rel.parts:
